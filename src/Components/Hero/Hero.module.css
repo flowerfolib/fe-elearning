@@ -1,0 +1,69 @@
+.main {
+    height: 800px;
+    width: 100%;
+    background-image: url('../../images/background__hero.webp');
+    background-size: cover;
+    background-position: 90%;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    left: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    width: 500px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.text {
+    font-size: 20px;
+    margin: 32px 0;
+}
+
+.join {
+    background-color: var(--primary);
+    padding: 24px 50px;
+    border-radius: 40px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    border: 3px solid #fff;
+}
+
+.join::before {
+    content: 'Tham gia';
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+.join::after {
+    content: '';
+    background-color: #fff;
+    transform: translateX(-100%);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+    z-index: 1;
+}
+
+.join:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--text);
+}
