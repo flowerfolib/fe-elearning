@@ -5,17 +5,16 @@ import edumaVideo from '../../Assets/Videos/Eduma-Preview.mp4'
 function Vid() {
   const vidRef = useRef()
   useEffect(() => {
-    const hadnleVideo = () => {
+    const handleVideo = () => {
       if (window.scrollY > 1300 && window.scrollY < 2500) {
-        console.log('oke')
         vidRef.current.play()
-        window.removeEventListener('scroll', hadnleVideo)
+        window.removeEventListener('scroll', handleVideo)
       }
     }
     window.addEventListener('load', () => {
-      hadnleVideo()
+      handleVideo()
       if (window.innerWidth > 768) {
-        window.addEventListener('scroll', hadnleVideo)
+        window.addEventListener('scroll', handleVideo)
       }
     })
   }, [])
