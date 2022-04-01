@@ -1,7 +1,7 @@
 .main {
     height: 800px;
     width: 100%;
-    background-image: url('../../images/background__hero.webp');
+    background-image: url('../../Assets/Images/background__hero.webp');
     background-size: cover;
     background-position: 90%;
     position: relative;
@@ -9,7 +9,7 @@
 
 .content {
     position: absolute;
-    left: 150px;
+    left: 10vw;
     top: 50%;
     transform: translateY(-50%);
     color: #fff;
@@ -18,23 +18,27 @@
 
 .title {
     font-size: 48px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .text {
-    font-size: 20px;
+    font-size: 24px;
     margin: 32px 0;
 }
 
 .join {
     background-color: var(--primary);
-    padding: 24px 50px;
     border-radius: 40px;
     display: inline-block;
     position: relative;
     overflow: hidden;
     z-index: 0;
     border: 3px solid #fff;
+    width: 250px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .join::before {
@@ -43,8 +47,9 @@
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
-    position: relative;
+    position: absolute;
     z-index: 2;
+    transition: .5s ease-in-out;
 }
 
 .join::after {
@@ -65,5 +70,44 @@
 .join:hover::after {
     opacity: 1;
     transform: translateX(0);
+}
+
+.join:hover::before {
+    opacity: 1;
+    transform: translateX(0);
     color: var(--text);
+}
+
+/* ===================== TABLET & MOBILE CSS ===================== */
+@media (max-width: 64em) {
+    .content {
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .join {
+        margin: auto;
+    }
+}
+
+/* ========================== TABLET CSS ========================== */
+@media (min-width: 48em) and (max-width: 64em) {
+    
+}
+
+/* ===================== MOBILE CSS ===================== */
+@media (max-width: 48em) {
+    .main {
+        background-position: 50%;
+    }
+
+    .title {
+        font-size: 11vw;
+    }
+
+    .join {
+        margin-top: 20vw;
+        width: 80%;
+    }
 }
