@@ -1,0 +1,45 @@
+.main {
+    display: flex;
+    margin-top: 7.7vw;
+    padding: 5vw 0;
+    /* background-color: aliceblue; */
+}
+
+.wrap {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    padding: 2vw 3vw;
+    background-color: #eee;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 0 #ccc;
+}
+
+.input {
+    width: 68%;
+    font-size: .8vw;
+    padding: .5vw 1vw;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.btn {
+    flex: 1;
+    display: inline-block;
+    font-size: 1vw;
+    font-weight: 600;
+    background-color: var(--primary);
+    border-radius: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+
+.btn:hover {
+    color: var(--text);
+    box-shadow: 0 0 10px 0 var(--primary);
+}
