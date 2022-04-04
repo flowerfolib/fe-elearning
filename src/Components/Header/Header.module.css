@@ -2,24 +2,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 36px 200px;
+    padding: 36px 10vw;
     transition: .3s ease-in-out;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 99;
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .main.active {
-    padding: 20px 200px;
+    padding: 20px 10vw;
     background-color: var(--primary-light);
     box-shadow: 0 0 10px 0 var(--primary-light);
 }
 
 .logo img{
-    height: 60px;
+    height: 3.8vw;
 }
 
 .nav {
@@ -28,21 +27,25 @@
     align-items: center;
 }
 
+.btn__show {
+    display: none !important;
+}
+
 .item {
-    margin: 0 32px;
+    margin: 0 2vw;
 }
 
 .item__link,
 .login {
-    display: block;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 1vw;
     color: #fff;
+    text-shadow: 0 0 1px #000;
 }
 
 .item__link {
-    padding: 16px;
+    padding: .5vw;
     position: relative;
 }
 
@@ -61,6 +64,10 @@
 
 .item__link:hover::after {
     transform: scaleX(1);
+}
+
+.item__link:hover {
+    color: #fff;
 }
 
 .login {
@@ -87,4 +94,75 @@
 
 .login:hover::after {
     transform: rotate(45deg) translateY(0) scaleY(4);
+}
+
+#login__mobile {
+    display: none;
+}
+
+/* ===================== TABLET & MOBILE CSS ===================== */
+@media (max-width: 64em) {
+
+}
+
+/* ========================== TABLET CSS ========================== */
+@media (min-width: 48em) and (max-width: 64em) {
+    .item__link {
+        font-size: 1.5vw;
+    }
+}
+
+/* ===================== MOBILE CSS ===================== */
+@media (max-width: 48em) {
+    .main {
+        padding: 20px 10vw;
+        background-color: var(--primary-light);
+    }
+
+    .main.active {
+        box-shadow: none;
+    }
+
+    .btn__show {
+        display: block !important;
+    }
+    
+    .logo img {
+        height: 12vw;
+    }
+
+    .login,
+    .login::after,
+    .item__link::after {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-light);
+        height: 0;
+        overflow: hidden;
+        transition: height .2s ease-in-out;
+        box-shadow: none;
+    }
+
+    .item {
+        margin: 1vw 0;
+    }
+
+    .item__link,
+    #login__mobile {
+        display: block;
+        padding: 8vw 10vw;
+        font-size: 4.5vw;
+    }
+
+    #login__mobile {
+        background-color: var(--primary-light);
+        box-shadow: none;
+    }
 }
