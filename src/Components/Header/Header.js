@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from './Header.module.css'
 import logo from '../../Assets/Images/logo.png'
+import CloseIcon from '@mui/icons-material/Close';
 
 function Header() {
     const headerRef = useRef()
@@ -13,7 +14,7 @@ function Header() {
         color: 'var(--text)',
     }
     const handleShow = () => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 1024) {
             setShow(!show)
         }
     }
@@ -58,10 +59,12 @@ function Header() {
                     </Link>
                 </li>
             </ul>
-            <Link to="/login" className={styles.login}>
-                Đăng nhập
-            </Link>
-            <MenuIcon onClick={handleShow} className={styles.btn__show} sx={showStyle} />
+            <div style={{display: 'flex', alignItems: 'center'}}>
+                <Link to="/login" className={styles.login}>
+                    Đăng nhập
+                </Link>
+                <MenuIcon onClick={handleShow} className={styles.btn__show} sx={showStyle} />
+            </div>
         </header>
     )
 }

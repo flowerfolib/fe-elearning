@@ -151,7 +151,7 @@
         height: 0;
         overflow: hidden;
         transition: height .2s ease-in-out;
-        box-shadow: 0 5px 5px 0 var(--primary);
+        box-shadow: none;
     }
 
     .item {
@@ -166,8 +166,7 @@
     }
 
     #login__mobile {
+        background-color: var(--primary-light);
         box-shadow: none;
-        background-color: #fff;
-        color: var(--text);
     }
 }

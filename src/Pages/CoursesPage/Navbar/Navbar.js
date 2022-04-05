@@ -13,10 +13,11 @@ function Navbar() {
             listActive.style.height = 0
         }
     }
-
     const handleClickMobile = e => {
-        const list = e.target.closest('.' + styles.list__child)
-        list.style.height = 0
+        if (window.innerWidth <= 768) {
+            const list = e.target.closest('.' + styles.list__child)
+            list.style.height = 0
+        }
     }
     const classSic = [
         {

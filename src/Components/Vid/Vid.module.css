@@ -19,22 +19,8 @@
 
 /* ===================== TABLET & MOBILE CSS ===================== */
 @media (max-width: 64em) {
-
-}
-
-/* ========================== TABLET CSS ========================== */
-@media (min-width: 48em) and (max-width: 64em) {
-    
-}
-
-/* ===================== MOBILE CSS ===================== */
-@media (max-width: 48em) {
-    .main {
-        margin-bottom: 20vw;
-    }
-    
     .wrap {
-        padding: 0;
-        width: 95%;
+        padding: 1rem;
+        width: 96%;
     }
 }

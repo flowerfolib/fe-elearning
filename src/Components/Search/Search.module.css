@@ -1,13 +1,13 @@
 .main {
     display: flex;
-    margin: 15vh 0 2vh;
+    margin: 10rem 0 2vh;
 }
 
 .wrap {
     margin: auto;
     width: 60%;
     display: flex;
-    padding: 2vh 3vw;
+    padding: 3vh 3vw;
     border-radius: 20px;
     box-shadow: 0 0 20px 0 rgba(204, 204, 204, 0.5);
 }
@@ -43,7 +43,7 @@
 /* ================ RESPONSIVE CSS ================ */
 @media (max-width: 64em) {
     .main {
-        margin: 10vh 0 2vh;
+        margin: 12vh 0 2vh;
     }
 
     .wrap {
