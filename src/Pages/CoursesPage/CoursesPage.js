@@ -9,7 +9,7 @@ function CoursesPage() {
     return <>
         <DataProvider>
             <div className={styles.main}>
-                <Header backgroundColor={'var(--primary-light)'} />
+                <Header />
                 <Search />
                 <div className={styles.content}>
                     <Navbar />

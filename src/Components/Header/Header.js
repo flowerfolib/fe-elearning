@@ -4,28 +4,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import styles from './Header.module.css'
 import logo from '../../Assets/Images/logo.png'
 
-function Header({ backgroundColor }) {
+function Header() {
     const headerRef = useRef()
     const navRef = useRef()
     const [show, setShow] = useState(false)
     const showStyle = {
         fontSize: '10vw',
-        color: '#fff',
+        color: 'var(--text)',
     }
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 100) {
-                headerRef.current.classList.add(styles.active)
-            } else {
-                headerRef.current.classList.remove(styles.active)
-            }
-        }
-        handleScroll()
-        window.addEventListener('scroll', handleScroll)
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
     const handleShow = () => {
         if (window.innerWidth < 768) {
             setShow(!show)
@@ -41,7 +27,7 @@ function Header({ backgroundColor }) {
         }
     }, [show])
     return (
-        <header ref={headerRef} style={{ backgroundColor }} className={styles.main} >
+        <header ref={headerRef} className={styles.main} >
             <Link to="/" className={styles.logo}>
                 <img src={logo} alt="Elearning" />
             </Link>
