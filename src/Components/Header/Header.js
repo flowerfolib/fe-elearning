@@ -3,37 +3,24 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from './Header.module.css'
 import logo from '../../Assets/Images/logo.png'
+import CloseIcon from '@mui/icons-material/Close';
 
-function Header({ backgroundColor }) {
+function Header() {
     const headerRef = useRef()
     const navRef = useRef()
     const [show, setShow] = useState(false)
     const showStyle = {
         fontSize: '10vw',
-        color: '#fff',
+        color: 'var(--text)',
     }
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 100) {
-                headerRef.current.classList.add(styles.active)
-            } else {
-                headerRef.current.classList.remove(styles.active)
-            }
-        }
-        handleScroll()
-        window.addEventListener('scroll', handleScroll)
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
     const handleShow = () => {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth <= 1024) {
             setShow(!show)
         }
     }
     useEffect(() => {
         if (show) {
-            const lastItem = navRef.current.querySelector('.' + styles.item + ':last-child')
+            const lastItem = navRef.current.lastChild
             const height = lastItem.offsetTop + lastItem.offsetHeight
             navRef.current.style.height = height + 'px'
         } else {
@@ -41,7 +28,7 @@ function Header({ backgroundColor }) {
         }
     }, [show])
     return (
-        <header ref={headerRef} style={{ backgroundColor }} className={styles.main} >
+        <header ref={headerRef} className={styles.main} >
             <Link to="/" className={styles.logo}>
                 <img src={logo} alt="Elearning" />
             </Link>
@@ -72,10 +59,12 @@ function Header({ backgroundColor }) {
                     </Link>
                 </li>
             </ul>
-            <Link to="/login" className={styles.login}>
-                Đăng nhập
-            </Link>
-            <MenuIcon onClick={handleShow} className={styles.btn__show} sx={showStyle} />
+            <div style={{display: 'flex', alignItems: 'center'}}>
+                <Link to="/login" className={styles.login}>
+                    Đăng nhập
+                </Link>
+                <MenuIcon onClick={handleShow} className={styles.btn__show} sx={showStyle} />
+            </div>
         </header>
     )
 }

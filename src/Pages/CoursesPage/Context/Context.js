@@ -12,7 +12,6 @@ export const DataProvider = ({ children }) => {
         ht: 'Ban hiền tài',
         ks: 'Ban kiểm soát'
     }
-
     const [data, setData] = useState([])
     const [cates, setCates] = useState([])
     const [current, setCurrent] = useState()
