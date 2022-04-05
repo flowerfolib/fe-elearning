@@ -2,3 +2,11 @@
     display: flex;
     padding-bottom: 5vw;
 }
+
+@media (max-width: 48em) {
+    .content {
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+}

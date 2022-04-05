@@ -13,13 +13,13 @@ function Header() {
         color: 'var(--text)',
     }
     const handleShow = () => {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth <= 768) {
             setShow(!show)
         }
     }
     useEffect(() => {
         if (show) {
-            const lastItem = navRef.current.querySelector('.' + styles.item + ':last-child')
+            const lastItem = navRef.current.lastChild
             const height = lastItem.offsetTop + lastItem.offsetHeight
             navRef.current.style.height = height + 'px'
         } else {

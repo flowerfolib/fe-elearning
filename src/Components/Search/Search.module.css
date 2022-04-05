@@ -1,23 +1,20 @@
 .main {
     display: flex;
-    margin-top: 7.7vw;
-    padding: 5vw 0;
-    /* background-color: aliceblue; */
+    margin: 15vh 0 2vh;
 }
 
 .wrap {
     margin: auto;
     width: 60%;
     display: flex;
-    padding: 2vw 3vw;
-    background-color: #eee;
+    padding: 2vh 3vw;
     border-radius: 20px;
-    box-shadow: 0 0 8px 0 #ccc;
+    box-shadow: 0 0 20px 0 rgba(204, 204, 204, 0.5);
 }
 
 .input {
     width: 68%;
-    font-size: .8vw;
+    font-size: 1rem;
     padding: .5vw 1vw;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -28,8 +25,7 @@
 .btn {
     flex: 1;
     display: inline-block;
-    font-size: 1vw;
-    font-weight: 600;
+    font-size: 1rem;
     background-color: var(--primary);
     border-radius: 10px;
     margin-left: 20px;
@@ -42,4 +38,36 @@
 .btn:hover {
     color: var(--text);
     box-shadow: 0 0 10px 0 var(--primary);
+}
+
+/* ================ RESPONSIVE CSS ================ */
+@media (max-width: 64em) {
+    .main {
+        margin: 10vh 0 2vh;
+    }
+
+    .wrap {
+        width: 80%;
+        padding: 3vh 3vw;
+    }
+}
+
+@media (max-width: 48em) {
+    .main {
+        margin: 15vh 0 2vh;
+    }
+
+    .wrap {
+        width: 90%;
+        padding: 3vh 5vw;
+    }
+
+    .input {
+        padding: 1vh 3vw;
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
 }

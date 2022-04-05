@@ -5,7 +5,10 @@ function Search() {
     return (
         <section className={styles.main}>
             <div className={styles.wrap}>
-                <input type="text" className={styles.input} placeholder="Nhập từ khóa cần tìm..."/>
+                <input
+                    type="text"
+                    className={styles.input}
+                    placeholder="Search..." />
                 <button className={styles.btn}>
                     Tìm kiếm
                 </button>
