@@ -1,0 +1,14 @@
+.main {
+    padding-top: 120px;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.title {
+    font-size: 2.3rem;
+}
+
+.desc {
+    font-size: 1.2rem;
+    margin-top: 16px;
+}
