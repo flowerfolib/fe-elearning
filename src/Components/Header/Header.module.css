@@ -101,6 +101,10 @@
     transform: rotate(45deg) translateY(0) scaleY(4);
 }
 
+.login:hover {
+    color: #fff;
+}
+
 #login__mobile {
     display: none;
 }

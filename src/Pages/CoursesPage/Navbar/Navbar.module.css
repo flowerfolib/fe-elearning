@@ -29,6 +29,7 @@
     overflow: hidden;
     margin-bottom: .5vh;
     transition: .2s ease-in;
+    padding: 0;
 }
 
 .child__link {
@@ -40,6 +41,7 @@
     transition: .2s;
     font-size: 1rem;
     font-weight: 500;
+    padding-left: 2rem;
 }
 
 .item__child {
@@ -48,6 +50,7 @@
 
 .child__link:hover {
     background-color: #ccc;
+    color: var(--text);
 }
 
 /* ========================= RESPONSIVE CSS ========================= */

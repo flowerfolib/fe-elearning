@@ -17,13 +17,13 @@ function Content() {
         </span>
       </p>
     </div>
-    <div className="d-flex align-items-center" style={{ height: '60vh', paddingBottom: '10vh' }}>
+    <div className="d-flex align-items-center" style={{ height: '50vh', paddingBottom: '10vh' }}>
       <div className="mx-auto">
         <h1 className={styles.quest__content}>
           <span className={styles.quest__number}>
             Câu 1:
           </span>
-          Ai thấy hoa vàng trên cỏ xanh ?
+          Chữ “Phật” nghĩa là gì?
         </h1>
       </div>
     </div>
@@ -33,31 +33,31 @@ function Content() {
           A
         </span>
         <div className={`${styles.item__inner} d-flex justify-content-center align-items-center`}>
-          Trung Anh
+          Bậc hoàn toàn giác ngộ
         </div>
       </li>
       <li className={`${styles.answer__item}`}>
         <span className={styles.tag}>
-          A
+          B
         </span>
         <div className={`${styles.item__inner} d-flex justify-content-center align-items-center`}>
-          Thăng
+          Người giác ngộ chân chánh
         </div>
       </li>
       <li className={`${styles.answer__item}`}>
         <span className={styles.tag}>
-          A
+          C
         </span>
         <div className={`${styles.item__inner} d-flex justify-content-center align-items-center`}>
-          Long
+          Bậc tự giác, giác tha, giác hạnh viên mãn
         </div>
       </li>
       <li className={`${styles.answer__item}`}>
         <span className={styles.tag}>
-          A
+          D
         </span>
         <div className={`${styles.item__inner} d-flex justify-content-center align-items-center`}>
-          Cả 3 đáp án trên
+          Bậc cao hơn thượng đế
         </div>
       </li>
     </ul>
