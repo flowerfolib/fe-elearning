@@ -1,0 +1,26 @@
+.main {
+    background-color: var(--primary-dark);
+}
+
+.nav {
+    display: flex;
+    border-left: 1px solid #eee;
+    padding: 0;
+}
+
+.nav__link {
+    font-size: 1.2rem;
+    font-weight: 700;
+    min-width: 200px;
+    color: #eee;
+    padding: .5rem 0;
+    transition: .2s linear;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid #eee;
+}
+
+.nav__link:hover {
+    background-color: rgba(238, 238, 238, 0.2);
+    color: #eee;
+}

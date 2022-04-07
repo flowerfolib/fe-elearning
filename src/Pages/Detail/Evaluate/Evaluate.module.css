@@ -1,0 +1,54 @@
+.main {}
+
+.lecturer {}
+
+.lecture__info {
+    width: 90%;
+    margin-top: 1rem;
+}
+
+.info__wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.info__title {
+    font-size: 1rem;
+    color: var(--primary-dark);
+    font-style: italic;
+    font-weight: 500;
+    width: 40%;
+    text-align: right;
+}
+
+.info__desc {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+
+.lecture__img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid var(--primary-light);
+    -webkit-user-drag: none;
+}
+
+.lecture__name {
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-top: 3rem;
+}
+
+.star {
+    font-size: 5rem;
+    background: -webkit-linear-gradient(left, #333 60%, #ccc 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

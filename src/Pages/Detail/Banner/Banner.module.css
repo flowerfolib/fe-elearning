@@ -2,6 +2,7 @@
     padding-top: 120px;
     background-color: var(--primary);
     color: #fff;
+    padding-bottom: 1rem;
 }
 
 .title {
@@ -9,6 +10,13 @@
 }
 
 .desc {
-    font-size: 1.2rem;
-    margin-top: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    height: 3rem;
+    overflow: hidden;
+    margin-bottom: 0;
 }
