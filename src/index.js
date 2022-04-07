@@ -5,6 +5,7 @@ import './Index.css';
 import CoursesPage from './Pages/CoursesPage/CoursesPage';
 import Home from './Pages/Home/Home';
 import Quiz from './Pages/Quiz';
+import Support from './Pages/Support/Support.js';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
         <Route exact path={"/"} component={Home} />
         <Route path={"/khoa-hoc"} component={CoursesPage} />
         <Route path={"/ky-thi"} component={Quiz} />
+        <Route path={"/ho-tro"} component={Support} />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,
