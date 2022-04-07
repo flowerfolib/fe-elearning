@@ -36,13 +36,56 @@ function Evaluate({ data }) {
                         </div>
                     </div>
                 </div>
-                <div className={`${styles.rating} py-5 mt-3 d-flex flex-column align-items-center`} style={{ border: '1px solid #eee' }}>
+                <div className={`${styles.rating} p-5 mt-3 d-flex flex-column align-items-center`} style={{ border: '1px solid #eee' }}>
                     <h3 className={styles.rate__title}>
                         Đánh giá
                     </h3>
+                    <div className={styles.title__wrap}>
+                        <span className={styles.rate__total}>
+                            3.6
+                        </span>
+                        <span className={styles.star__main}>★</span>
+                    </div>
                     <div className={styles.wrap}>
-                        <span className={styles.star}>★★★★★</span>
-                    </div>nop
+                        <span className={styles.rate__number}>
+                            5
+                        </span>
+                        <span className={styles.rate__item}>
+                            ★★★★★
+                        </span>
+                    </div>
+                    <div className={styles.wrap}>
+                        <span className={styles.rate__number}>
+                            4
+                        </span>
+                        <span className={styles.rate__item}>
+                            ★★★★
+                        </span>
+                    </div>
+                    <div className={styles.wrap}>
+                        <span className={styles.rate__number}>
+                            3
+                        </span>
+                        <span className={styles.rate__item}>
+                            ★★★
+                        </span>
+                    </div>
+                    <div className={styles.wrap}>
+                        <span className={styles.rate__number}>
+                            2
+                        </span>
+                        <span className={styles.rate__item}>
+                            ★★
+                        </span>
+                    </div>
+                    <div className={styles.wrap}>
+                        <span className={styles.rate__number}>
+                            1
+                        </span>
+                        <span className={styles.rate__item}>
+                            ★
+                        </span>
+                    </div>
                 </div>
             </div>
         </div >

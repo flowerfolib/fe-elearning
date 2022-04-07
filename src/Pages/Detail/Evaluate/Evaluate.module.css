@@ -1,4 +1,7 @@
-.main {}
+.main {
+    position: sticky;
+    top: 8rem;
+}
 
 .lecturer {}
 
@@ -46,9 +49,57 @@
     margin-top: 3rem;
 }
 
-.star {
+/* ==================== RATING CSS ==================== */
+.rating {
+    color: var(--text);
+}
+
+.rate__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.title__wrap {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.rate__total {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+.star__main {
     font-size: 5rem;
-    background: -webkit-linear-gradient(left, #333 60%, #ccc 60%);
+    line-height: 5rem;
+    padding-left: 1rem;
+    background: -webkit-linear-gradient(left, #FFC300 68%, #eee 68%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+.rate__number {
+    font-size: 1.5rem;
+    line-height: 1;
+    position: relative;
+    bottom: -2px;
+    text-align: right;
+    width: 10%;
+    font-weight: 500;
+}
+
+.rate__item {
+    margin-left: 1rem;
+    font-size: 2rem;
+    line-height: 1;
+    color: #FFC300;
 }
