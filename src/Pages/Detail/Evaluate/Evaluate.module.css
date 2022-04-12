@@ -1,6 +1,11 @@
 .main {
     position: sticky;
     top: 8rem;
+    -webkit-transition: position 10s;
+    -moz-transition: position 10s;
+    -ms-transition: position 10s;
+    -o-transition: position 10s;
+    transition: position 10s;
 }
 
 .lecturer {}
