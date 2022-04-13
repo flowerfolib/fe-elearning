@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { Link, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min'
 import Evaluate from '../Evaluate/Evaluate'
+import LabList from '../LabList/LabList'
 import Desc from './Desc/Desc'
 import styles from './Nav.module.css'
 
 
 function Nav({ data }) {
-    const [content, setContent] = useState(1)
+    const [content, setContent] = useState(2)
     const handleClick = e => {
         console.log(e.target.dataset.content)
         setContent(+e.target.dataset.content)
@@ -37,7 +38,7 @@ function Nav({ data }) {
             <div className="row py-5">
                 <div className="col-md-8 p-5" style={{ border: '1px solid #eee' }}>
                     {
-                        content === 1 ? <Desc data={data} /> : content === 2 ? 'content2' : 'content3'
+                        content === 1 ? <Desc data={data} /> : content === 2 ? <LabList /> : 'content3'
                     }
                 </div>
                 <div className="col-md-4">
