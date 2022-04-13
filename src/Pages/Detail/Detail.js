@@ -10,11 +10,13 @@ function Detail() {
   const id = +useLocation().search.replace('?', '')
   const { data } = useContext(DataContext)
   return (
-    <div className={`${styles.main} pb-4`}>
+    <>
       <Header />
-      <Banner data={data[id]} />
-      <Nav data={data[id]} />
-    </div>
+      <div className={`${styles.main} pb-4`}>
+        <Banner data={data[id]} />
+        <Nav data={data[id]} />
+      </div>
+    </>
   )
 }
 

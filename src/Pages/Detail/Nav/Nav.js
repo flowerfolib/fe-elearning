@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min'
+import { Link, Route, Switch, useLocation } from 'react-router-dom/cjs/react-router-dom.min'
 import Evaluate from '../Evaluate/Evaluate'
 
 import LabList from '../LabList/LabList'
@@ -11,29 +11,40 @@ import styles from './Nav.module.css'
 
 
 function Nav({ data }) {
-
-    const [content, setContent] = useState(1)
-
-    const handleClick = e => {
-        console.log(e.target.dataset.content)
-        setContent(+e.target.dataset.content)
-    }
+    const id = useLocation().search.replace('?', '')
     return <>
         <div className={styles.main}>
             <div className="container">
                 <ul className={styles.nav}>
                     <li className={styles.nav__item}>
-                        <Link to="/chi-tiet/mo-ta" onClick={handleClick} data-content={1} className={styles.nav__link}>
+                        <Link
+                            to={{
+                                pathname: "/khoa-hoc/chi-tiet"
+                            }}
+                            data-content={1}
+                            className={styles.nav__link}>
                             Mô tả
                         </Link>
                     </li>
                     <li className={styles.nav__item}>
-                        <Link to="/chi-tiet/bai-hoc" onClick={handleClick} data-content={2} className={styles.nav__link}>
+                        <Link
+                            to={{
+                                pathname: "/khoa-hoc/chi-tiet",
+                                search: "bai-hoc"
+                            }}
+                            data-content={2}
+                            className={styles.nav__link}>
                             Khóa học
                         </Link>
                     </li>
                     <li className={styles.nav__item}>
-                        <Link to="/chi-tiet/danh-gia" onClick={handleClick} data-content={3} className={styles.nav__link}>
+                        <Link
+                            to={{
+                                pathname: "/khoa-hoc/chi-tiet",
+                                search: "danh-gia"
+                            }}
+                            data-content={3}
+                            className={styles.nav__link}>
                             Đánh giá
                         </Link>
                     </li>
@@ -42,11 +53,9 @@ function Nav({ data }) {
         </div >
         <div className="container">
             <div className="row py-5">
-                <div className="col-md-8 px-5" style={{ border: '1px solid #eee' }}>
+                <div className="col-md-8 p-5" style={{ border: '1px solid #eee' }}>
                     {
-
-                        content === 1 ? <Desc data={data} /> : content === 2 ? <LabList /> : <Rating />
-
+                        id === "" ? <Desc data={data} /> : id === "bai-hoc" ? <LabList /> : <Rating />
                     }
                 </div>
                 <div className="col-md-4">
