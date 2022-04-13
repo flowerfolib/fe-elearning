@@ -7,6 +7,7 @@ import Introduce from "./Introduce/Introduce";
 import Comment from "./Comment/Comment";
 import Analyst from "./Analyst/Analyst";
 import Share from "./Share/Share";
+import LabList from "../Detail/LabList/LabList";
 
 function CourseDetail() {
   const [content, setContent] = useState(1);
@@ -89,6 +90,7 @@ function CourseDetail() {
           <div className={`col-md-4`}>
             <div className={`${styles.courseList}`}>
               <h2 className={`${styles.listTitle}`}>Nội dung khóa học</h2>
+                    <LabList/>
             </div>
           </div>
         </div>
