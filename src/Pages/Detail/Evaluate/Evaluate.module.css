@@ -1,0 +1,110 @@
+.main {
+    position: sticky;
+    top: 8rem;
+    -webkit-transition: position 10s;
+    -moz-transition: position 10s;
+    -ms-transition: position 10s;
+    -o-transition: position 10s;
+    transition: position 10s;
+}
+
+.lecturer {}
+
+.lecture__info {
+    width: 90%;
+    margin-top: 1rem;
+}
+
+.info__wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.info__title {
+    font-size: 1rem;
+    color: var(--primary-dark);
+    font-style: italic;
+    font-weight: 500;
+    width: 40%;
+    text-align: right;
+}
+
+.info__desc {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+
+.lecture__img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid var(--primary-light);
+    -webkit-user-drag: none;
+}
+
+.lecture__name {
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-top: 3rem;
+}
+
+/* ==================== RATING CSS ==================== */
+.rating {
+    color: var(--text);
+}
+
+.rate__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.title__wrap {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.rate__total {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+.star__main {
+    font-size: 5rem;
+    line-height: 5rem;
+    padding-left: 1rem;
+    background: -webkit-linear-gradient(left, #FFC300 68%, #eee 68%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+.rate__number {
+    font-size: 1.5rem;
+    line-height: 1;
+    position: relative;
+    bottom: -2px;
+    text-align: right;
+    width: 10%;
+    font-weight: 500;
+}
+
+.rate__item {
+    margin-left: 1rem;
+    font-size: 2rem;
+    line-height: 1;
+    color: #FFC300;
+}

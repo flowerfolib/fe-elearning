@@ -1,15 +1,16 @@
 import React, { useContext, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 import { useLocation } from "react-router-dom";
-import { DataContext } from '../Context/Context'
-import styles from './CourseDetail.module.css'
+import { DataContext } from '../../../Context/Context'
+import styles from './CourseList.module.css'
 import course from '../../../Assets/Images/course__detail.jpg'
 import PersonIcon from '@mui/icons-material/Person';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import { convertShortName } from '../../../Extensions/convertShortName';
+import { toSlug } from '../../../Extensions/Extensions';
 
-function CourseDetail() {
+function CourseList() {
   const { data } = useContext(DataContext)
   let routerLink = convertShortName(useLocation().pathname.replace("/khoa-hoc/", ''))
   return (
@@ -58,7 +59,12 @@ function CourseDetail() {
                       <PersonOutlineIcon className={styles.info__icon} /> 220 Học viên
                     </p>
                   </div>
-                  <Link className={styles.item__join}>
+                  <Link
+                    to={{
+                      pathname: `/chi-tiet/${toSlug(val.name)}`,
+                      search: `${index}`
+                    }}
+                    className={styles.item__join}>
                     Tham gia
                   </Link>
                 </div>
@@ -85,7 +91,12 @@ function CourseDetail() {
                       <PersonOutlineIcon className={styles.info__icon} /> 220 Học viên
                     </p>
                   </div>
-                  <Link className={styles.item__join}>
+                  <Link
+                    to={{
+                      pathname: `/chi-tiet/${toSlug(val.name)}`,
+                      search: `${index}`
+                    }}
+                    className={styles.item__join}>
                     Tham gia
                   </Link>
                 </div>
@@ -97,4 +108,4 @@ function CourseDetail() {
   )
 }
 
-export default CourseDetail
+export default CourseList

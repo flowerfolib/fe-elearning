@@ -1,11 +1,8 @@
 import { createContext, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { toSlug } from "../../../Extensions/Extensions";
 
 export const DataContext = createContext()
 
 export const DataProvider = ({ children }) => {
-    let id = useLocation();
     const decryption = {
         orientation_integration: 'Hội nhập định hướng',
         cn: 'Công nghệ',

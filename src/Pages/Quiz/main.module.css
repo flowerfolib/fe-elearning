@@ -3,6 +3,7 @@
     height: 100vh;
     background: url(../../Assets/Images/quiz/background.png);
     position: relative;
+    background-size: cover;
 }
 
 .logo {
@@ -10,4 +11,5 @@
     position: absolute;
     top: 50px;
     left: 50px;
+    -webkit-user-drag: none;
 }

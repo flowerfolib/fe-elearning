@@ -16,6 +16,7 @@
     box-sizing: border-box;
     max-width: 100%;
     font-family: 'Quicksand', serif;
+    will-change: auto;
 }
 
 a {
@@ -40,5 +41,9 @@ input {
 
 /* ====================================================== RENGULAR ====================================================== */
 html {
+    scroll-behavior: smooth;
+}
+
+html:focus-within {
     scroll-behavior: smooth;
 }
