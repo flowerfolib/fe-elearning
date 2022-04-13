@@ -33,7 +33,7 @@
     font-size: 1.2rem;
     font-weight: 700;
     min-width: 200px;
-    color: #eee;
+    color: rgb(75, 75, 75);
     padding: .5rem 0;
     transition: .2s linear;
     display: flex;
@@ -43,6 +43,9 @@
 
 .nav__item.active{
     background-color:red;
+}
+.nav__item.active>a{
+    color:#ffffff;
 }
 
 .nav__link:hover {
