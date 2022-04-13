@@ -36,7 +36,7 @@ function Nav({ data }) {
         </div >
         <div className="container">
             <div className="row py-5">
-                <div className="col-md-8 p-5" style={{ border: '1px solid #eee' }}>
+                <div className="col-md-8 px-5" style={{ border: '1px solid #eee' }}>
                     {
                         content === 1 ? <Desc data={data} /> : content === 2 ? <LabList /> : 'content3'
                     }

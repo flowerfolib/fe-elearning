@@ -9,11 +9,6 @@ function LabList() {
             name: 'Đường về xứ phật - Tập 1 - Trưởng lão Thích Thông Lạc',
         },
         {
-            id: 0,
-            name: 'Đường về xứ phật - Tập 1 - Trưởng lão Thích Thông Lạc',
-            exp: '100 xp'
-        },
-        {
             id: 1,
             name: 'Đường về xứ phật - Tập 2 - Trưởng lão Thích Thông Lạc',
             exp: '100 xp'
@@ -51,14 +46,11 @@ function LabList() {
                         className={styles.lab__link}
                     >
                         <span className={styles.lab__icon}>
-                            
+                            <i className="fa-solid fa-circle-play"></i>
                         </span> {lab.name}
                     </Link>
-                    {
-                        lab.exp && <span className={styles.lab__exp}>
-                            {lab.exp}
-                        </span>
-                    }
+                    <div>
+                    </div>
                 </li>)
             }
         </ul>

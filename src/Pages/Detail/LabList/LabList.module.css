@@ -1,15 +1,34 @@
-.lab__list{
-    
+.lab__list {
+    width: 100%;
+    padding: 0;
 }
 
-.lab__item{
-
+.lab__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 0 2rem;
 }
 
-.lab__link{
-
+.lab__icon {
+    padding-right: 1rem;
+    color: #a12d2d;
 }
 
-.lab__exp{
+.lab__link {
+    padding: 1rem 0;
+    display: -webkit-box;
+    color: var(--text);
+}
 
+.lab__link:hover {
+    color: var(--text);
+}
+
+.lab__exp {
+    background-color: #f8c219;
+    padding: .1rem .5rem;
+    border-radius: 3px;
+    line-height: 1;
 }
