@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min'
 import Evaluate from '../Evaluate/Evaluate'
 import Desc from './Desc/Desc'
@@ -6,22 +6,27 @@ import styles from './Nav.module.css'
 
 
 function Nav({ data }) {
+    const [content, setContent] = useState(1)
+    const handleClick = e => {
+        console.log(e.target.dataset.content)
+        setContent(+e.target.dataset.content)
+    }
     return <>
         <div className={styles.main}>
             <div className="container">
                 <ul className={styles.nav}>
                     <li className={styles.nav__item}>
-                        <Link className={styles.nav__link}>
+                        <Link to="/chi-tiet/mo-ta" onClick={handleClick} data-content={1} className={styles.nav__link}>
                             Mô tả
                         </Link>
                     </li>
                     <li className={styles.nav__item}>
-                        <Link className={styles.nav__link}>
+                        <Link to="/chi-tiet/bai-hoc" onClick={handleClick} data-content={2} className={styles.nav__link}>
                             Khóa học
                         </Link>
                     </li>
                     <li className={styles.nav__item}>
-                        <Link className={styles.nav__link}>
+                        <Link to="/chi-tiet/danh-gia" onClick={handleClick} data-content={3} className={styles.nav__link}>
                             Đánh giá
                         </Link>
                     </li>
@@ -30,8 +35,10 @@ function Nav({ data }) {
         </div >
         <div className="container">
             <div className="row py-5">
-                <div className="col-md-8 p-5" style={{border: '1px solid #eee'}}>
-                    <Desc data={data} />
+                <div className="col-md-8 p-5" style={{ border: '1px solid #eee' }}>
+                    {
+                        content === 1 ? <Desc data={data} /> : content === 2 ? 'content2' : 'content3'
+                    }
                 </div>
                 <div className="col-md-4">
                     <Evaluate data={data} />

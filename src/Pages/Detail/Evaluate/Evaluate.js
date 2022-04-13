@@ -3,7 +3,6 @@ import styles from './Evaluate.module.css'
 import lecture from '../../../Assets/Images/Detail/lecture.jpg'
 
 function Evaluate({ data }) {
-    console.log(data);
     return (
         <div className={styles.main}>
             <div className="d-flex flex-column">
