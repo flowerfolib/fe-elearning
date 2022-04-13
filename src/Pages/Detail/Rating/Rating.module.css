@@ -1,0 +1,32 @@
+.img {
+    width: 100px;
+    height: 100px;
+    padding: 4px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+.right {
+    display: flex;
+}
+
+#title {
+    display: flex;
+}
+
+.star {
+    color: #FFC300;
+}
+
+.content {
+    display: flex;
+}
+
+.title {
+    margin-right: 20px;
+}
+
+.contents {
+    border-bottom: 1px solid #ccc;
+    padding: 3rem 0;
+}
