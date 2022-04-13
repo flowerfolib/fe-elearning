@@ -19,8 +19,7 @@ function Nav({ data }) {
                     <li className={styles.nav__item}>
                         <Link
                             to={{
-                                pathname: "/khoa-hoc/chi-tiet",
-                                search: "mo-ta"
+                                pathname: "/khoa-hoc/chi-tiet"
                             }}
                             data-content={1}
                             className={styles.nav__link}>
@@ -56,7 +55,7 @@ function Nav({ data }) {
             <div className="row py-5">
                 <div className="col-md-8 p-5" style={{ border: '1px solid #eee' }}>
                     {
-                        id === "mo-ta" ? <Desc data={data} /> : id === "bai-hoc" ? <LabList /> : <Rating />
+                        id === "" ? <Desc data={data} /> : id === "bai-hoc" ? <LabList /> : <Rating />
                     }
                 </div>
                 <div className="col-md-4">

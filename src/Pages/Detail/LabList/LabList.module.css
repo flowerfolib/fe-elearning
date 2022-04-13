@@ -5,7 +5,6 @@
 
 .lab__list + .lab__list {
     border-top: 1px solid #000;
-    padding-top: 2rem;
 }
 
 .lab__title {
