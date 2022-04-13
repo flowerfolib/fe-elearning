@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import { DataProvider } from './Context/Context';
 import './Index.css';
+import CourseDetail from './Pages/CourseDetail/CourseDetail';
 import CoursesPage from './Pages/CoursesPage/CoursesPage';
 import Detail from './Pages/Detail/Detail';
 import Home from './Pages/Home/Home';
@@ -15,9 +16,11 @@ ReactDOM.render(
       <BrowserRouter>
         <Switch>
           <Route exact path={"/"} component={Home} />
-          <Route path={"/khoa-hoc"} component={CoursesPage} />
+          <Route exact path={"/khoa-hoc"} component={CoursesPage} />
           <Route path={"/ky-thi"} component={Quiz} />
-          <Route path={"/chi-tiet"} component={Detail} />
+          <Route exact path={"/khoa-hoc/chi-tiet"} component={Detail} />
+          <Route path={"/khoa-hoc/chi-tiet/lab"} component={CourseDetail}/>
+          <Route exact path={"/ho-tro"} component={Support} />
         </Switch>
       </BrowserRouter>
     </DataProvider>

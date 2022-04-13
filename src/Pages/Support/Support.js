@@ -2,7 +2,6 @@ import styles from "./Support.module.css";
 import clsx from 'clsx'
 import { AccessAlarm, ThreeDRotation, TrendingUp } from '@mui/icons-material';
 import { KeyboardArrowDown, FilterVintage } from '@mui/icons-material';
-import { useState } from 'react'
 
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -32,15 +31,10 @@ function Support() {
 
     ]
 
-    let [show, setShow] = useState()
-    function handleShow(e) {
-
-    }
-
     return (
         <div>
-            <Header />
-            <div className={styles.support}>
+            <Header/>
+            <div className={`${styles.support} mt-8`}>
 
                 <h2 className={styles.announce}>
                     HÃY XEM CHÚNG TÔI CÓ THỂ GIÚP GÌ CHO BẠN
