@@ -1,42 +1,31 @@
-import React, { useMemo, useState, useLayoutEffect, useEffect } from 'react'
+import React, { useMemo, useState, useLayoutEffect, useEffect, useRef } from 'react'
 import styles from './Content.module.css'
 import timer from '../../../Assets/Images/quiz/time.png'
 import { useContext } from 'react'
 import { Context } from '../Provider'
 import clsx from 'clsx'
 function Content() {
-  const { api, index, answerList, setAnswerList } = useContext(Context)
+
+
+
+  const { api, index, list } = useContext(Context)
 
   const [answer, setAnswer] = useState(undefined)
 
-  if (answerList.map(e => e.q).find((e) => e = api[index].question) !== undefined) {
-    var oldAnswer = answerList.map(e => e.q)
-  }
-
-
   function checked(e) {
 
-    if (!answerList.map(e => e.q).includes(api[index].question)) {
-      setAnswerList((prev) => {
-        let newOne = { q: api[index].question, a: e }
-        return [...prev, newOne]
-      })
-    }
-    else {
-      answerList.forEach(listItem => {
-        if (listItem.q === api[index].question) {
-          listItem.a = e
-        }
-      })
-    }
-
-    if (answer === e) {
+    if (e === list.current[index]) {   
+      list.current[index] = undefined
       setAnswer(undefined)
+
     }
     else {
+      list.current[index] = e
       setAnswer(e)
     }
 
+
+    console.log(list.current);
   }
   return (
     <>
@@ -79,7 +68,7 @@ function Content() {
                 className={clsx(
                   'd-flex justify-content-center align-items-center',
                   styles.item__inner,
-                  { [styles.item__innerActive]: (answer === e) }
+                  { [styles.item__innerActive]: (list.current[index] === e) }
                 )}
               >
                 {e}

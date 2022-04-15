@@ -1,20 +1,33 @@
 import React, { useContext, useState } from 'react'
 import styles from './Control.module.css'
 import { Context } from '../Provider'
+import clsx from 'clsx'
 
 
 function Control() {
-    const { api, index, setIndex, answerList } = useContext(Context)
+    const { api, index, setIndex, list } = useContext(Context)
+    const [isVisible, setIsVisible] = useState(false)
+    function handleSubmit() {
+        alert(list.current.map(e => e))
+    }
+
+    let listChecked = list.current.length - list.current.filter((e) => e === undefined).length //Số câu trả lời đẫ chọn
 
     function handleNext() {
-        if (index < api.length - 1) {
-            setIndex(index + 1)
+        if (index === api.length - 1 && api.length === listChecked + 1) {
+            setIsVisible(!isVisible)
         }
-
+        else {
+            if (index < api.length - 1) {
+                setIndex(index + 1)
+            }
+        }
     }
     function handlePrev() {
+        if (api.length === listChecked) {
+            setIsVisible(!isVisible)
+        }
         if (index > 0) {
-
             setIndex(index - 1)
         }
     }
@@ -37,12 +50,23 @@ function Control() {
                     Câu trước
                 </button>
                 <div className={styles.process}>
-                    <div className={styles.process__inner} style={{ width: `${(answerList.map(e => e.a).length) * 100 / (api.length)}%` }} >
-                        {(answerList.map(e => e.a).length) * 100 / (api.length)}%
+                    <div className={styles.process__inner} style={{ width: `${listChecked * 100 / (api.length)}%` }} >
+                        {listChecked * 100 / (api.length)}%
                     </div>
                 </div>
-                <button className={styles.btn} onClick={handleNext}>
+                <button className={clsx(styles.btn, {
+                    [styles.Invisible]: isVisible
+                })}
+                    onClick={handleNext}
+                >
                     Câu tiếp theo
+                </button>
+                <button className={clsx(styles.btn, {
+                    [styles.Invisible]: !isVisible
+                })}
+                    onClick={handleSubmit}
+                >
+                    Nộp bài
                 </button>
             </div >
         </div>
