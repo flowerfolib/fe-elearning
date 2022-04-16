@@ -19,7 +19,7 @@ function Nav({ data }) {
                     <li className={styles.nav__item}>
                         <Link
                             to={{
-                                pathname: "/khoa-hoc/chi-tiet"
+                                pathname: "/khoa-hoc/chi-tiet/#",
                             }}
                             data-content={1}
                             className={styles.nav__link}>
@@ -40,7 +40,7 @@ function Nav({ data }) {
                     <li className={styles.nav__item}>
                         <Link
                             to={{
-                                pathname: "/khoa-hoc/chi-tiet",
+                                pathname: "/khoa-hoc/chi-tiet/",
                                 search: "danh-gia"
                             }}
                             data-content={3}

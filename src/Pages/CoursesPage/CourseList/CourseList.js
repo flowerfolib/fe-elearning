@@ -61,7 +61,7 @@ function CourseList() {
                   </div>
                   <Link
                     to={{
-                      pathname: `/chi-tiet/${toSlug(val.name)}`,
+                      pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
                       search: `${index}`
                     }}
                     className={styles.item__join}>
@@ -93,7 +93,7 @@ function CourseList() {
                   </div>
                   <Link
                     to={{
-                      pathname: `/chi-tiet/${toSlug(val.name)}`,
+                      pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
                       search: `${index}`
                     }}
                     className={styles.item__join}>

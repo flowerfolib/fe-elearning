@@ -1,43 +1,11 @@
-import React from 'react'
+import React, { useContext }  from 'react'
 import styles from './LabList.module.css'
 import { Link } from 'react-router-dom'
+import { DataContext } from "../../../Context/Context";
+
 
 function LabList() {
-    const labs = [
-        {
-            id: 0,
-            type: 'basic',
-            name: 'Đường về xứ phật - Tập 1 - Trưởng lão Thích Thông Lạc',
-        },
-        {
-            id: 1,
-            type: 'basic',
-            name: 'Đường về xứ phật - Tập 2 - Trưởng lão Thích Thông Lạc',
-            exp: '100 xp'
-        },
-        {
-            id: 2,
-            type: 'basic',
-            name: 'Đường về xứ phật - Tập 3 - Trưởng lão Thích Thông Lạc',
-            exp: '100 xp'
-        },
-        {
-            id: 3,
-            type: 'advanced',
-            name: 'Đường về xứ phật - Tập 4 - Trưởng lão Thích Thông Lạc',
-        },
-        {
-            id: 4,
-            type: 'advanced',
-            name: 'Đường về xứ phật - Tập 5 - Trưởng lão Thích Thông Lạc',
-            exp: '100 xp'
-        },
-        {
-            id: 5,
-            type: 'advanced',
-            name: 'Đường về xứ phật - Tập 6 - Trưởng lão Thích Thông Lạc',
-        },
-    ]
+    const { data } = useContext(DataContext);
     return (
         <>
             <ul className={styles.lab__list}>
@@ -47,7 +15,7 @@ function LabList() {
                     </h3>
                 </li>
                 {
-                    labs.filter(lab => lab.type === 'basic').map((lab, index) => <li key={index} className={styles.lab__item}>
+                    data.filter(lab => lab['lesson'].title  === 'CƠ BẢN').map((lab, index) => <li key={index} className={styles.lab__item}>
                         <Link
                             to={
                                 {
@@ -73,7 +41,7 @@ function LabList() {
                     </h3>
                 </li>
                 {
-                    labs.filter(lab => lab.type === 'advanced').map((lab, index) => <li key={index} className={styles.lab__item}>
+                    data.filter(lab => lab['lesson'].title === 'TRUNG CẤP').map((lab, index) => <li key={index} className={styles.lab__item}>
                         <Link
                             to={
                                 {
