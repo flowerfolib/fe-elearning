@@ -11,7 +11,8 @@ import styles from './Nav.module.css'
 
 
 function Nav({ data }) {
-    const id = useLocation().search.replace('?', '')
+    const id = useLocation()
+    console.log(id.hash)
     return <>
         <div className={styles.main}>
             <div className="container">
@@ -19,7 +20,9 @@ function Nav({ data }) {
                     <li className={styles.nav__item}>
                         <Link
                             to={{
-                                pathname: "/khoa-hoc/chi-tiet/#",
+                                pathname: id.pathname,
+                                search: id.search,
+                                hash: ''
                             }}
                             data-content={1}
                             className={styles.nav__link}>
@@ -29,8 +32,9 @@ function Nav({ data }) {
                     <li className={styles.nav__item}>
                         <Link
                             to={{
-                                pathname: "/khoa-hoc/chi-tiet",
-                                search: "bai-hoc"
+                                pathname: id.pathname,
+                                search: id.search,
+                                hash: 'bai-hoc'
                             }}
                             data-content={2}
                             className={styles.nav__link}>
@@ -40,8 +44,9 @@ function Nav({ data }) {
                     <li className={styles.nav__item}>
                         <Link
                             to={{
-                                pathname: "/khoa-hoc/chi-tiet/",
-                                search: "danh-gia"
+                                pathname: id.pathname,
+                                search: id.search,
+                                hash: 'danh-gia'
                             }}
                             data-content={3}
                             className={styles.nav__link}>
@@ -55,7 +60,7 @@ function Nav({ data }) {
             <div className="row py-5">
                 <div className="col-md-8 p-5" style={{ border: '1px solid #eee' }}>
                     {
-                        id === "" ? <Desc data={data} /> : id === "bai-hoc" ? <LabList /> : <Rating />
+                        id.hash === "" ? <Desc data={data} /> : id.hash === "#bai-hoc" ? <LabList data={data} /> : <Rating />
                     }
                 </div>
                 <div className="col-md-4">
