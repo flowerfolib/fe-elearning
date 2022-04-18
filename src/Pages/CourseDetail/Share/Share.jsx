@@ -16,6 +16,7 @@ function Share() {
         url={currentLocation}
         quote={"Đào tạo Diligo"}
         hashtag={"#daotao_diligo"}
+        description={"aiueo"}
       >
         <FacebookIcon size={48} round /> Chia sẻ lên Facbook
       </FacebookShareButton>

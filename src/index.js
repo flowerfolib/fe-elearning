@@ -18,8 +18,8 @@ ReactDOM.render(
           <Route exact path={"/"} component={Home} />
           <Route exact path={"/khoa-hoc"} component={CoursesPage} />
           <Route path={"/ky-thi"} component={Quiz} />
-          <Route exact path={"/khoa-hoc/chi-tiet"} component={Detail} />
-          <Route path={"/khoa-hoc/chi-tiet/lab"} component={CourseDetail} />
+          <Route exact path={"/khoa-hoc/chi-tiet/:name"} component={Detail} />
+          <Route path={"/khoa-hoc/chi-tiet/:name/lab"} component={CourseDetail} />
           <Route exact path={"/ho-tro"} component={Support} />
         </Switch>
       </BrowserRouter>
