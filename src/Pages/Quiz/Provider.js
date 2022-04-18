@@ -6,6 +6,10 @@ const Context = createContext();
 function Provider({ children }) {
 
   const [index, setIndex] = useState(0)
+  const [listChecked, setListChecked] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
+  const [isDisable, setIsDisable] = useState(false)
+  
   const api = [
     {
       question: 'Chữ “Phật” nghĩa là gì?',
@@ -37,16 +41,19 @@ function Provider({ children }) {
     }]
   let list = useRef(new Array(api.length).fill(undefined))
 
-
   const data = {
     api,
     index,
     setIndex,
     list,
-
+    listChecked,
+    setListChecked,
+    isVisible,
+    setIsVisible,
+    isDisable,
+    setIsDisable
   }
 
-  // console.log(data.api.map(e=>e.answerChecked))
   return (
     <Context.Provider value={data}>
       {children}

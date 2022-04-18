@@ -2,31 +2,47 @@ import React, { useContext, useState } from 'react'
 import styles from './Control.module.css'
 import { Context } from '../Provider'
 import clsx from 'clsx'
+import { listItemTextClasses } from '@mui/material'
 
 
 function Control() {
-    const { api, index, setIndex, list } = useContext(Context)
-    const [isVisible, setIsVisible] = useState(false)
+    const {
+        api,
+        index,
+        setIndex,
+        list,
+        listChecked,
+        setListChecked,
+        isVisible,
+        setIsVisible,
+        isDisable,
+        setIsDisable }
+        = useContext(Context)
+
     function handleSubmit() {
         alert(list.current.map(e => e))
     }
 
-    let listChecked = list.current.length - list.current.filter((e) => e === undefined).length //Số câu trả lời đẫ chọn
+
+
 
     function handleNext() {
-        if (index === api.length - 1 && api.length === listChecked + 1) {
-            setIsVisible(!isVisible)
+
+        if (index < api.length - 1) {
+            setIndex(index + 1)
         }
-        else {
-            if (index < api.length - 1) {
-                setIndex(index + 1)
-            }
+
+        if (index === api.length - 2 && api.length !== listChecked) {
+            setIsDisable(true)
+        }
+
+        if (index === api.length - 1 && api.length === listChecked) {
+            setIsVisible(true)
         }
     }
     function handlePrev() {
-        if (api.length === listChecked) {
-            setIsVisible(!isVisible)
-        }
+        setIsVisible(false)
+        setIsDisable(false)
         if (index > 0) {
             setIndex(index - 1)
         }
@@ -49,14 +65,19 @@ function Control() {
                 <button className={styles.btn} onClick={handlePrev}>
                     Câu trước
                 </button>
-                <div className={styles.process}>
+                <div
+
+                    className={styles.process}>
                     <div className={styles.process__inner} style={{ width: `${listChecked * 100 / (api.length)}%` }} >
                         {listChecked * 100 / (api.length)}%
                     </div>
                 </div>
-                <button className={clsx(styles.btn, {
-                    [styles.Invisible]: isVisible
-                })}
+                <button
+                    disabled={isDisable}
+                    className={clsx(styles.btn, {
+                        [styles.Invisible]: isVisible,
+                        [styles.disable_Btn]: isDisable
+                    })}
                     onClick={handleNext}
                 >
                     Câu tiếp theo
@@ -72,5 +93,4 @@ function Control() {
         </div>
     )
 }
-
 export default Control

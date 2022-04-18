@@ -5,16 +5,53 @@ import { useContext } from 'react'
 import { Context } from '../Provider'
 import clsx from 'clsx'
 function Content() {
-
-
-
-  const { api, index, list } = useContext(Context)
-
+  const [minutes, setMinutes] = useState(59);
+  const [seconds, setSeconds] = useState(59);
+  const {
+    api,
+    index,
+    setIndex,
+    list,
+    listChecked,
+    setListChecked,
+    isVisible,
+    setIsVisible,
+    isDisable,
+    setIsDisable } = useContext(Context)
   const [answer, setAnswer] = useState(undefined)
+
+  useEffect(() => {
+    let myInterval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
+      }
+      if (seconds === 0) {
+        if (minutes === 0) {
+          clearInterval(myInterval)
+        } else {
+          setMinutes(minutes - 1);
+          setSeconds(59);
+        }
+      }
+    }, 1000)
+    return () => {
+      clearInterval(myInterval);
+    };
+  });
+
+  useEffect(() => {
+    if (api.length === listChecked && api.length - 1 === index) {
+      setIsVisible(true)
+    }
+    else {
+      setIsVisible(false)
+
+    }
+  }, [listChecked])
 
   function checked(e) {
 
-    if (e === list.current[index]) {   
+    if (e === list.current[index]) {
       list.current[index] = undefined
       setAnswer(undefined)
 
@@ -24,24 +61,25 @@ function Content() {
       setAnswer(e)
     }
 
+    setListChecked(list.current.filter((e) => e !== undefined).length) //Số câu trả lời đã chọn
 
-    console.log(list.current);
+
+
+
+
   }
   return (
     <>
       <div className={`${styles.main} container`}>
 
-        {/*timmer */}
+        {/*timer */}
         <div className="d-flex flex-column align-items-center">
           <img src={timer} alt="time" className={styles.timer} />
           <p className={styles.timer__param}>
             <span className={styles.time__minute}>
-              59
+              {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
             </span>
-            :
-            <span className={styles.time__second}>
-              59
-            </span>
+
           </p>
         </div>
 
