@@ -1,11 +1,14 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import styles from './Control.module.css'
 import { Context } from '../Provider'
 import clsx from 'clsx'
 import { listItemTextClasses } from '@mui/material'
+import zIndex from '@mui/material/styles/zIndex'
 
 
 function Control() {
+    const [isDisablePrev, setIsDisablePrev] = useState(true)
+    // let isDisablePrev = true
     const {
         api,
         index,
@@ -24,20 +27,24 @@ function Control() {
     }
 
 
-
+    useEffect(() => {
+        if (index !== 0) {
+            setIsDisablePrev(false)
+        }
+        else {
+            setIsDisablePrev(false)
+        }
+    }, [index])
 
     function handleNext() {
-
         if (index < api.length - 1) {
             setIndex(index + 1)
         }
-
-        if (index === api.length - 2 && api.length !== listChecked) {
-            setIsDisable(true)
-        }
-
         if (index === api.length - 1 && api.length === listChecked) {
             setIsVisible(true)
+        }
+        if (index === api.length - 2 && api.length !== listChecked) {
+            setIsDisable(true)
         }
     }
     function handlePrev() {
@@ -46,6 +53,7 @@ function Control() {
         if (index > 0) {
             setIndex(index - 1)
         }
+
     }
     return (
         <div className="d-flex flex-column align-items-center w-100">
@@ -62,7 +70,13 @@ function Control() {
                 </div>
             </div>
             <div className={`d-flex justify-content-between align-items-center w-100 pt-4 px-5`}>
-                <button className={styles.btn} onClick={handlePrev}>
+                <button
+                    disabled={isDisablePrev}
+
+                    onClick={handlePrev}
+                    className={clsx(styles.btn, {
+                        [styles.disable_Btn]: isDisablePrev
+                    })}>
                     Câu trước
                 </button>
                 <div
