@@ -6,7 +6,7 @@ import styles from './Navbar.module.css'
 function Navbar() {
     const handleClick = (e) => {
         const listActive = e.target.parentElement.querySelector('.' + styles.list__child)
-        const height = listActive.lastChild.offsetTop + listActive.lastChild.offsetHeight - listActive.offsetTop
+        const height = listActive.lastChild.offsetTop + listActive.lastChild.offsetHeight - listActive.offsetTop + 2
         if (listActive.offsetHeight === 0) {
             listActive.style.height = height + 'px'
         } else {
