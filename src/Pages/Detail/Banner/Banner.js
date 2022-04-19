@@ -9,7 +9,7 @@ function Banner({ data }) {
                     <div className="container py-3">
                         <div className="row mx-auto">
                             <div className="col-sm-12 col-md-4">
-
+                                <img src={data.avatar} alt="" className={styles.avatar}/>
                             </div>
                             <div className="col-sm-12 col-md-8">
                                 <div className={styles.info__wrap}>

@@ -12,7 +12,6 @@ import styles from './Nav.module.css'
 
 function Nav({ data }) {
     const id = useLocation()
-    console.log(id.hash)
     return <>
         <div className={styles.main}>
             <div className="container">
