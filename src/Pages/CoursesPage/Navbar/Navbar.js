@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import { toSlug } from '../../../Extensions/Extensions'
 import styles from './Navbar.module.css'
@@ -13,6 +13,16 @@ function Navbar() {
             listActive.style.height = 0
         }
     }
+    useEffect(() => {
+        document.querySelectorAll('.' + styles.list__child).forEach(val => {
+            const height = val.lastChild.offsetTop + val.lastChild.offsetHeight - val.offsetTop
+            if (val.offsetHeight === 0) {
+                val.style.height = height + 'px'
+            } else {
+                val.style.height = 0
+            }
+        })
+    }, [])
     const handleClickMobile = e => {
         if (window.innerWidth <= 768) {
             const list = e.target.closest('.' + styles.list__child)

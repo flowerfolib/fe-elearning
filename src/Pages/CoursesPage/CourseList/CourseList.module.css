@@ -51,11 +51,10 @@
 }
 
 .item__img {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     position: relative;
     top: 1px;
-    -webkit-user-drag: none;
+    width: 100%;
+    object-fit: contain;
 }
 
 .item__title {
@@ -69,6 +68,7 @@
     line-height: 1.3rem;
     height: 2.6rem;
     overflow: hidden;
+    text-align: center;
 }
 
 .info__content {
@@ -76,6 +76,12 @@
     align-items: center;
     margin: .5vw 0;
     font-size: .8rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-height: 1.5rem;
+    height: 1.5rem;
+    overflow: hidden;
 }
 
 .info__icon {
