@@ -1,20 +1,19 @@
 import React from 'react'
 import styles from './Evaluate.module.css'
-import lecture from '../../../Assets/Images/Detail/lecture.jpg'
 
 function Evaluate({ data }) {
     return (
         <div className={styles.main}>
             <div className="d-flex flex-column">
                 <div className={`${styles.lecturer} py-5 d-flex flex-column align-items-center`} style={{ border: '1px solid #eee' }}>
-                    <img src={lecture} alt="" className={styles.lecture__img} />
+                    <img src={data.avatar_lecturers} alt="" className={styles.lecture__img} />
                     <div className={styles.lecture__info}>
                         <div className={styles.info__wrap}>
                             <span className={styles.info__title}>
                                 Tên giảng viên :
                             </span>
                             <span className={styles.info__desc}>
-                                Lee Wang Nong
+                                Nguyễn Trần Nhiệm
                             </span>
                         </div>
                         <div className={styles.info__wrap}>
@@ -30,7 +29,7 @@ function Evaluate({ data }) {
                                 Vị trí :
                             </span>
                             <span className={styles.info__desc}>
-                                End Developer
+                                Trưởng ban CNTT
                             </span>
                         </div>
                     </div>
