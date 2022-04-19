@@ -6,7 +6,7 @@ function Evaluate({ data }) {
         <div className={styles.main}>
             <div className="d-flex flex-column">
                 <div className={`${styles.lecturer} py-5 d-flex flex-column align-items-center`} style={{ border: '1px solid #eee' }}>
-                    <img src={data.avatar_lecturers} alt="" className={styles.lecture__img} />
+                    <img src={'https://i.ibb.co/Scghk1G/anhnhiem.jpg'} alt="" className={styles.lecture__img} />
                     <div className={styles.lecture__info}>
                         <div className={styles.info__wrap}>
                             <span className={styles.info__title}>
