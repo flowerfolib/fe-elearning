@@ -54,7 +54,7 @@
 }
 
 .train__item {
-    width: calc(100% /3);
+    width: calc(100% /4);
     padding: 20px;
 }
 

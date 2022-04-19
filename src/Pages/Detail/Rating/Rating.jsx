@@ -3,10 +3,8 @@ import styles from "./Rating.module.css";
 import mot from "../../../Assets/Images/rating/1.jpg";
 import hai from "../../../Assets/Images/rating/2.jpg";
 import ba from "../../../Assets/Images/rating/3.jpg";
-import { margin } from "@mui/system";
 
 function Rating() {
-  console.log(styles);
   return (
     <>
       <div className={`row ${styles.contents}`}>

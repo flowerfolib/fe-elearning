@@ -14,10 +14,11 @@ export const DataProvider = ({ children }) => {
     const [current, setCurrent] = useState()
     const [currentList, setCurrentList] = useState([])
     useEffect(() => {
-        fetch('http://test.diligo.vn:15000/api/v1/slide_channel')
+        fetch('http://hrm.diligo.vn/api/v1/slide_channel')
             .then(result => result.json())
             .then(data => {
                 setData(data.data)
+                console.log(data.data)
             })
     }, [])
     useEffect(() => {

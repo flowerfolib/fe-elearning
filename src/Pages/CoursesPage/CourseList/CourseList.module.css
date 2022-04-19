@@ -29,7 +29,7 @@
     position: absolute;
     font-size: 1rem;
     font-weight: 600;
-    background-color: red;
+    background-color: #ff4747;
     padding: .3rem 2rem;
     color: #fff;
     top: 1rem;
@@ -46,7 +46,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    border-color: red red transparent transparent;
+    border-color: #ff4747 #ff4747 transparent transparent;
     filter: brightness(.8);
 }
 
@@ -86,7 +86,7 @@
     display: block;
     font-size: 1rem;
     font-weight: 700;
-    background-color: red;
+    background-color: #ff4747;
     padding: .5vw 0;
     border-radius: 3px;
     margin-top: 1vw;
