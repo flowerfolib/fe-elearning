@@ -64,7 +64,7 @@ function LabList() {
                 }
             </ul> */}
             {
-                data[id] && data[id].lesson.map((vals, index) => <ul key={index}>
+                data[id] && data[id].lesson.map((vals, index) => <ul key={index} className={styles.lab__list}>
                     <li className={`mt-5 mb-3 ${styles.lab__title}`}>
                         <h3>
                             {vals.title}
