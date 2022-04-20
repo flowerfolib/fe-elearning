@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import Result from './Components/Result/Result';
 import { DataProvider } from './Context/Context';
 import './Index.css';
 import CourseDetail from './Pages/CourseDetail/CourseDetail';
@@ -23,6 +24,8 @@ ReactDOM.render(
           <Route exact path={"/khoa-hoc/chi-tiet/:name"} component={Detail} />
           <Route path={"/khoa-hoc/chi-tiet/:name/lab"} component={CourseDetail} />
           <Route exact path={"/ho-tro"} component={Support} />
+          <Route exact path={"/ket-qua"} component={Result} />
+
           <Route exact path={"/dang-nhap"} component={Signin} />
         </Switch>
       </BrowserRouter>
