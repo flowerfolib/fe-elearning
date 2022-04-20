@@ -6,7 +6,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: red;
+    background-color: #ff6f6e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@
     font-size: 1.2rem;
     border-radius: 50px;
     padding: 0 2rem;
-    background-color: var(--primary-dark);
+    background-color: #ff6f6e;
     border: 5px solid #fff;
     font-weight: 600;
     color: #fff;
@@ -51,7 +51,7 @@
 
 .process__inner {
     height: 100%;
-    background-color: var(--primary-dark);
+    background-color: #ff6f6e;
     transition: 0.2s ease-in;
     overflow: hidden;
     display: flex;

@@ -1,5 +1,5 @@
 import styles from "./Support.module.css";
-import {  FilterVintage } from "@mui/icons-material";
+import { FilterVintage } from "@mui/icons-material";
 
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -52,19 +52,17 @@ function Support() {
               <AccordionDetails>
                 <Typography className={` ${styles.content}`}>
                   <FilterVintage
-                    style={{ paddingRight: "5px" }}
                     className={styles.orangeColor}
                   />
-                  <p style={{ flex: "1" }}>{e.content1}</p>
+                  <p>{e.content1}</p>
                   <ExpandMoreIcon className={styles.orangeColor} />
                 </Typography>
 
                 <Typography className={` ${styles.content}`}>
                   <FilterVintage
-                    style={{ paddingRight: "5px" }}
                     className={styles.orangeColor}
                   />
-                  <p style={{ flex: "1" }}>{e.content2}</p>
+                  <p>{e.content2}</p>
                   <ExpandMoreIcon className={styles.orangeColor} />
                 </Typography>
               </AccordionDetails>
