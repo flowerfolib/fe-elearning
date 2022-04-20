@@ -16,10 +16,8 @@ function Courses() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 1024) {
-        console.log("active");
         introRef.current.classList.add(styles.laptopL);
       } else {
-        console.log("remove");
         introRef.current.classList.remove(styles.laptopL);
       }
     };

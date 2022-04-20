@@ -47,7 +47,7 @@
 
 .train__list {
     width: 80%;
-    margin: auto;
+    margin: 0 auto 200px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -63,7 +63,7 @@
     border-radius: 20px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.5s ease-in-out;
+    transition: 0.2s ease-in-out;
     height: 100%;
 }
 
@@ -78,7 +78,7 @@
     background: rgba(148, 175, 163, 0.2);
     z-index: -1;
     transform: scale(3) translate(0);
-    transition: transform 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .train__link:hover::before {
@@ -86,7 +86,7 @@
 }
 
 .train__link:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -111,12 +111,10 @@
 }
 
 /* ===================== TABLET & MOBILE CSS ===================== */
-@media (max-width: 64em) {
-}
+@media (max-width: 64em) {}
 
 /* ========================== TABLET CSS ========================== */
-@media (min-width: 48em) and (max-width: 64em) {
-}
+@media (min-width: 48em) and (max-width: 64em) {}
 
 /* ===================== MOBILE CSS ===================== */
 @media (max-width: 48em) {

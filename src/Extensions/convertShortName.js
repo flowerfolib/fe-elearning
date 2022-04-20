@@ -8,6 +8,14 @@ export const convertShortName = (e) => {
             return "ks";
         case 'ban-hien-tai':
             return 'ht';
+        case 'ban-btkh':
+            return 'ptkh';
+        case 'ban-ptth-va-sp':
+            return 'ptsp';
+        case 'ban-cung-ung':
+            return 'ccu';
+        case 'ban-tai-chinh-ke-toan':
+            return 'kt';
         default:
             return ''
     }

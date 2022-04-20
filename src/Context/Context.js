@@ -11,7 +11,7 @@ export const DataProvider = ({ children }) => {
     }
     const department = [
         {
-            short: "bcu",
+            short: "ccu",
             name: "Ban cung ứng",
         },
         {
@@ -31,12 +31,12 @@ export const DataProvider = ({ children }) => {
             name: "Ban PTKH",
         },
         {
-            short: "sp",
+            short: "ptsp",
             name: 'Ban PTTH và SP',
         },
         {
-            short: "tckt",
-            name: "Ban tài chínn kế toán",
+            short: "kt",
+            name: "Ban tài chính kế toán",
         },
 
     ]
@@ -51,7 +51,9 @@ export const DataProvider = ({ children }) => {
             .then(result => result.json())
             .then(data => {
                 setData(data.data)
-                console.log(data.data)
+                data.data.forEach(val => {
+                    console.log(val.department)
+                })
             })
     }, [])
     useEffect(() => {
