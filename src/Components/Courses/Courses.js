@@ -56,8 +56,29 @@ function Courses() {
 
           {routerLink
             ? data
-                .filter((item) => item.department === routerLink)
-                .map((val, index) => (
+              .filter((item) => item.department === routerLink)
+              .map((val, index) => {
+                if (val.department === "orientation_integration") {
+                  return (
+                    <li key={index} className={styles.course__item}>
+                      <Link
+                        to={{
+                          pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
+                        }}
+                        className={styles.course__link}
+                      >
+                        <div className={styles.img__wrap}>
+                          <img src={val.avatar} alt="" className={styles.img} />
+                        </div>
+                        <h3 className={styles.item__title}>{val.name}</h3>
+                      </Link>
+                    </li>
+                  )
+                }
+              })
+            : data.map((val, index) => {
+              if (val.department === "orientation_integration") {
+                return (
                   <li key={index} className={styles.course__item}>
                     <Link
                       to={{
@@ -66,28 +87,14 @@ function Courses() {
                       className={styles.course__link}
                     >
                       <div className={styles.img__wrap}>
-                        <img src={course} alt="" className={styles.img} />
+                        <img src={val.avatar} alt="" className={styles.img} />
                       </div>
                       <h3 className={styles.item__title}>{val.name}</h3>
                     </Link>
                   </li>
-                ))
-            : data.map((val, index) => (
-                <li key={index} className={styles.course__item}>
-                  <Link
-                    to={{
-                      pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
-                      
-                    }}
-                    className={styles.course__link}
-                  >
-                    <div className={styles.img__wrap}>
-                      <img src={course} alt="" className={styles.img} />
-                    </div>
-                    <h3 className={styles.item__title}>{val.name}</h3>
-                  </Link>
-                </li>
-              ))}
+                )
+              }
+            })}
         </ul>
       </section>
     </>

@@ -15,14 +15,13 @@
     position: relative;
 }
 
-
 .nav__line {
     position: absolute;
     height: 0.3vw;
     background-color: var(--primary-light);
     border-radius: 3px;
     bottom: 0;
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 .nav__item {
@@ -34,7 +33,7 @@
     padding: 12px;
     font-size: 1.2vw;
     font-weight: 500;
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
     color: var(--text);
 }
 
@@ -54,7 +53,7 @@
 }
 
 .train__item {
-    width: calc(100% /4);
+    width: calc(100% / 4);
     padding: 20px;
 }
 
@@ -64,11 +63,12 @@
     border-radius: 20px;
     position: relative;
     overflow: hidden;
-    transition: transform .5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
 }
 
 .train__link::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 100%;
@@ -78,41 +78,44 @@
     background: rgba(148, 175, 163, 0.2);
     z-index: -1;
     transform: scale(3) translate(0);
-    transition: transform .5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .train__link:hover::before {
     transform: scale(3) translate(20px);
 }
 
-.train__link:hover{
+.train__link:hover {
     transform: scale(1.02);
+	Box-shadow: 0 0 5px 0 rgba(0,0,0,0.2); 
+
 }
 
 .train__img {
     border-radius: 20px;
 }
 
+.test{
+    color: red
+}
+
 .train__title {
     font-size: 1.2vw;
     font-weight: 600;
     margin-top: 20px;
-    display: -webkit-box ;
-    -webkit-box-orient: vertical ;
-    -webkit-line-clamp: 1 ;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
     overflow: hidden;
     color: var(--text);
 }
 
-
 /* ===================== TABLET & MOBILE CSS ===================== */
 @media (max-width: 64em) {
-
 }
 
 /* ========================== TABLET CSS ========================== */
 @media (min-width: 48em) and (max-width: 64em) {
-    
 }
 
 /* ===================== MOBILE CSS ===================== */
