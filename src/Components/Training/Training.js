@@ -29,7 +29,6 @@ function Training() {
     e.target.closest("." + styles.nav__item).classList.add(styles.active);
 
     setDepart(e.target.closest("li").dataset.department)
-
   };
   useEffect(() => {
     const handleLoad = () => {
