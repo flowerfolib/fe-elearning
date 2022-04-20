@@ -111,6 +111,7 @@ function Training() {
               <Link
                 to={{
                   pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
+                  search: `${data.indexOf(val)}`
                 }}
                 className={styles.train__link}
               >

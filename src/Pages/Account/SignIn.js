@@ -1,6 +1,5 @@
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
-
 import "./Signin.css";
 import styles from "./signin.module.css";
 import logo from "../../Assets/Images/logo.png";
@@ -9,7 +8,6 @@ import axios from "axios";
 import { setUserSession } from "../../Utils/Common";
 
 export default function Signin(props) {
-  const [db] = useState("hr_diligo");
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -57,7 +55,7 @@ export default function Signin(props) {
   };
 
   return (
-    <section className="four-zero-four-section version-1">
+    <section className={"four-zero-four-section version-1 "}>
       <Helmet>
         <title>Đăng nhập</title>
       </Helmet>
@@ -67,7 +65,7 @@ export default function Signin(props) {
       <div id="stars3" />
       <div className="container-fluid" style={{ marginTop: "-13rem" }}>
         <div className="row">
-          <div className="col-lg-12 d-flex flex-column">
+          <div className={"col-lg-12 d-flex flex-column " + styles.main}>
             <Link to="/" className={styles.logoa}>
               <img className={styles.logo} src={logo} alt="Logo" />
             </Link>

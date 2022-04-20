@@ -50,7 +50,6 @@ export const DataProvider = ({ children }) => {
         fetch('http://hrm.diligo.vn/api/v1/slide_channel')
             .then(result => result.json())
             .then(data => {
-                console.log(data);
                 setData(data.data)
                 console.log(data.data)
             })

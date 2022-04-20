@@ -64,6 +64,7 @@ function Courses() {
                       <Link
                         to={{
                           pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
+                          search: `${data.indexOf(val)}`
                         }}
                         className={styles.course__link}
                       >
@@ -83,6 +84,7 @@ function Courses() {
                     <Link
                       to={{
                         pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
+                        search: `${data.indexOf(val)}`
                       }}
                       className={styles.course__link}
                     >
