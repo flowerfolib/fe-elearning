@@ -9,7 +9,7 @@ import { toSlug } from "../../Extensions/Extensions";
 
 function Courses() {
   let routerLink = convertShortName(
-    useLocation().pathname.replace("/khoa-hoc/", "")
+    useLocation().pathname.replace("/khoa-hoc", "")
   );
   const introRef = useRef();
   const { data } = useContext(DataContext);

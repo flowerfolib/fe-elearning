@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link, Route, Switch, useLocation } from 'react-router-dom/cjs/react-router-dom.min'
+import React from 'react'
+import { Link, useLocation } from 'react-router-dom/cjs/react-router-dom.min'
 import Evaluate from '../Evaluate/Evaluate'
 
 import LabList from '../LabList/LabList'
@@ -12,7 +12,6 @@ import styles from './Nav.module.css'
 
 function Nav({ data }) {
     const id = useLocation()
-    console.log(id.hash)
     return <>
         <div className={styles.main}>
             <div className="container">
@@ -24,9 +23,9 @@ function Nav({ data }) {
                                 search: id.search,
                                 hash: ''
                             }}
-                            data-content={1}
+                            data-content={2}
                             className={styles.nav__link}>
-                            Mô tả
+                            Khóa học
                         </Link>
                     </li>
                     <li className={styles.nav__item}>
@@ -34,11 +33,11 @@ function Nav({ data }) {
                             to={{
                                 pathname: id.pathname,
                                 search: id.search,
-                                hash: 'bai-hoc'
+                                hash: 'mo-ta'
                             }}
-                            data-content={2}
+                            data-content={1}
                             className={styles.nav__link}>
-                            Khóa học
+                            Mô tả
                         </Link>
                     </li>
                     <li className={styles.nav__item}>
@@ -60,7 +59,7 @@ function Nav({ data }) {
             <div className="row py-5">
                 <div className="col-md-8 p-5" style={{ border: '1px solid #eee' }}>
                     {
-                        id.hash === "" ? <Desc data={data} /> : id.hash === "#bai-hoc" ? <LabList data={data} /> : <Rating />
+                        id.hash === "" ? <LabList data={data} /> : id.hash === "#mo-ta" ? <Desc data={data} /> : <Rating />
                     }
                 </div>
                 <div className="col-md-4">

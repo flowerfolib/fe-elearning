@@ -34,7 +34,7 @@
 
 .lab__link {
     padding: 1rem 0;
-    display: inline-block;
+    display: inline-flex;
     color: var(--text);
 }
 
