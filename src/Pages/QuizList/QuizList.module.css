@@ -1,0 +1,27 @@
+.main {
+    padding-top: 200px;
+    background: url(../../Assets/Images/quiz/background.png);
+}
+.list {
+    margin: auto;
+    width: 50vw;
+    background-color: #fff;
+}
+.logo {
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 50px;
+    -webkit-user-drag: none;
+}
+.btn {
+    border-radius: 30px;
+    background-color: var(--primary-light);
+    color: #fff;
+    padding: 5px;
+}
+.disable {
+    background-color: #ddd;
+    color: #000;
+}

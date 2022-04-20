@@ -3,6 +3,7 @@ import styles from './Control.module.css'
 import { Context } from '../Provider'
 import clsx from 'clsx'
 
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function Control() {
     const [isDisablePrev, setIsDisablePrev] = useState(true)
@@ -20,9 +21,9 @@ function Control() {
         = useContext(Context)
 
     function handleSubmit(e) {
-        alert(list.current.map(e => e))
-    }
+        // alert(list.current.map(e => e))
 
+    }
 
     useEffect(() => {
         if (index !== 0) {
@@ -52,6 +53,8 @@ function Control() {
         }
 
     }
+    
+
     return (
         <div className="d-flex flex-column align-items-center w-100 ">
             <div className={styles.number__wrap}>
@@ -93,15 +96,26 @@ function Control() {
                 >
                     Câu tiếp theo
                 </button>
+
                 <button className={clsx(styles.btn, {
                     [styles.Invisible]: !isVisible
                 })}
                     onClick={handleSubmit}
                 >
-                    Nộp bài
+                    <Link
+                        to={{
+                            pathname: `/ket-qua`,
+                        }}
+                        style={{ color: '#fff' }}
+
+                    >
+                        Nộp bài
+                    </Link>
                 </button>
             </div >
+
         </div>
     )
 }
+
 export default Control
