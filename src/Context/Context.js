@@ -52,6 +52,7 @@ export const DataProvider = ({ children }) => {
             .then(data => {
                 console.log(data);
                 setData(data.data)
+                console.log(data.data)
             })
     }, [])
     useEffect(() => {
