@@ -8,6 +8,7 @@ import CoursesPage from './Pages/CoursesPage/CoursesPage';
 import Detail from './Pages/Detail/Detail';
 import Home from './Pages/Home/Home';
 import Quiz from './Pages/Quiz';
+import Signin from './Pages/Account/SignIn';
 import Support from './Pages/Support/Support.js';
 
 ReactDOM.render(
@@ -21,6 +22,7 @@ ReactDOM.render(
           <Route exact path={"/khoa-hoc/chi-tiet/:name"} component={Detail} />
           <Route path={"/khoa-hoc/chi-tiet/:name/lab"} component={CourseDetail} />
           <Route exact path={"/ho-tro"} component={Support} />
+          <Route exact path={"/dang-nhap"} component={Signin} />
         </Switch>
       </BrowserRouter>
     </DataProvider>
