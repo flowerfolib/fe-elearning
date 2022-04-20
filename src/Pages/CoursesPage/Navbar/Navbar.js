@@ -43,7 +43,11 @@ function Navbar() {
             cates: [
                 "Công nghệ",
                 "Ban hiền tài",
-                "Ban kiểm soát"
+                "Ban kiểm soát",
+                "Ban cung ứng",
+                "Ban PTKH",
+                "Ban PTTH và SP",
+                "Ban tài chính kế toán"
             ]
         }
     ]
