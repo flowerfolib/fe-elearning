@@ -1,8 +1,8 @@
 .main {
     background: linear-gradient(#fff, red);
-    padding-top: 3em;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    padding-top: 3em;
     position: relative;
 }
 .timer {

@@ -87,16 +87,16 @@
 
 .train__link:hover {
     transform: scale(1.02);
-	Box-shadow: 0 0 5px 0 rgba(0,0,0,0.2); 
-
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .train__img {
     border-radius: 20px;
+    object-fit: contain;
 }
 
-.test{
-    color: red
+.test {
+    color: red;
 }
 
 .train__title {

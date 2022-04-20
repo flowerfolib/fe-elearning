@@ -8,7 +8,6 @@ export const DataProvider = ({ children }) => {
         cn: 'Công nghệ',
         ht: 'Ban hiền tài',
         ks: 'Ban kiểm soát',
-
     }
     const department = [
         {

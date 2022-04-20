@@ -22,7 +22,7 @@ function Control() {
         setIsDisable }
         = useContext(Context)
 
-    function handleSubmit() {
+    function handleSubmit(e) {
         alert(list.current.map(e => e))
     }
 
@@ -56,7 +56,7 @@ function Control() {
 
     }
     return (
-        <div className="d-flex flex-column align-items-center w-100">
+        <div className="d-flex flex-column align-items-center w-100 ">
             <div className={styles.number__wrap}>
                 <div className={styles.number}>
                     <span id="current">
