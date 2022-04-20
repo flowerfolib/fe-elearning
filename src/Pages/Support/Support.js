@@ -33,12 +33,12 @@ function Support() {
     <div>
       <Header />
       <div className={`${styles.support} mt-8`}>
-        <h2 className={styles.announce}>
+        <h2 className={styles.announce} style={{marginTop: '10rem'}}>
           HÃY XEM CHÚNG TÔI CÓ THỂ GIÚP GÌ CHO BẠN
         </h2>
         {api.map((e) => (
           <div style={{ width: "50%" }}>
-            <Accordion key={e.id} className={styles.wrapper}>
+            <Accordion expanded key={e.id} className={styles.wrapper}>
               <AccordionSummary
                 expandIcon={
                   <ExpandMoreIcon

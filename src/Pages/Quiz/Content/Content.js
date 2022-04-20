@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useLayoutEffect, useEffect, useRef } from 'react'
+import React, {  useState, useEffect} from 'react'
 import styles from './Content.module.css'
 import timer from '../../../Assets/Images/quiz/time.png'
 import { useContext } from 'react'
@@ -10,14 +10,10 @@ function Content() {
   const {
     api,
     index,
-    setIndex,
     list,
     listChecked,
     setListChecked,
-    isVisible,
-    setIsVisible,
-    isDisable,
-    setIsDisable } = useContext(Context)
+    setIsVisible, } = useContext(Context)
   const [answer, setAnswer] = useState(undefined)
 
   useEffect(() => {
