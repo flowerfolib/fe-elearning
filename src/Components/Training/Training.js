@@ -29,7 +29,6 @@ function Training() {
     e.target.closest("." + styles.nav__item).classList.add(styles.active);
 
     setDepart(e.target.closest("li").dataset.department)
-
   };
   useEffect(() => {
     const handleLoad = () => {
@@ -41,8 +40,6 @@ function Training() {
     };
     window.addEventListener("load", handleLoad());
   }, []);
-
-
   return (
     <div className={styles.main}>
       <h2 className={styles.title}>Đào tạo nội bộ</h2>
@@ -108,16 +105,19 @@ function Training() {
       <ul className={styles.train__list}>
 
         {data
-          .filter((item) => item.department === depart)
+          .filter((item) => depart ? item.department === depart : item.department !== depart)
           .map((val, index) => (
             <li key={index} className={styles.train__item}>
               <Link
                 to={{
                   pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
+                  search: `${data.indexOf(val)}`
                 }}
                 className={styles.train__link}
               >
-                <img src={val.avatar} alt="" className={styles.train__img} />
+                <div className="d-flex" style={{ height: "150px", justifyContent: "center" }}>
+                  <img src={val.avatar} alt="" className={styles.train__img} />
+                </div>
 
                 <p className={styles.train__title}>{val.name}</p>
               </Link>

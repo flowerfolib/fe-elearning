@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-.lab__list + .lab__list {
-    border-top: 1px solid #000;
-}
-
 .lab__title {
     border-radius: 20px;
 }

@@ -80,39 +80,63 @@ function Header(props) {
           </Link>
         </li>
       </ul>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        {token ? (
-          <div className="position-relative">
-            Xin chào <span className={styles.uid}>{names}</span>
-            <ul
-              className={`${styles.toggleUser} overflow-hidden position-absolute top-100 end-0`}
+      {token ?
+        // (
+        //   <div className={"position-relative " + styles.user__info}>
+        //     Xin chào <span className={styles.uid}>{names}</span>
+        //     <ul
+        //       className={`${styles.toggleUser} overflow-hidden position-absolute top-100 end-0`}
+        //     >
+        //       <li>
+        //         <Link
+        //           to={{ pathname: `http://hrm.diligo.vn/web?db=diligo_hrms` }}
+        //           target="_blank"
+        //         >
+        //           Ứng dụng
+        //         </Link>
+        //       </li>
+        //       <li>
+        //         <Link to="/" onClick={handleLogout}>
+        //           <b>Đăng xuất</b>
+        //         </Link>
+        //       </li>
+        //     </ul>
+        //   </div>
+        // )
+        <div className={styles.user}>
+          <i
+            className={"fa-solid fa-user " + styles.user__icon}
+          />
+          <div className={styles.user__info}>
+            <h5 className={styles.user__name}>
+              {names}
+            </h5>
+            <Link
+              to={{ pathname: `http://hrm.diligo.vn/web?db=diligo_hrms` }}
+              target="_blank"
+              className={styles.user__link}
             >
-              <li>
-                <Link
-                  to={{ pathname: `http://hrm.diligo.vn/web?db=diligo_hrms` }}
-                  target="_blank"
-                >
-                  Ứng dụng
-                </Link>
-              </li>
-              <li>
-                <Link to="/" onClick={handleLogout}>
-                  <b>Đăng xuất</b>
-                </Link>
-              </li>
-            </ul>
+              Ứng dụng
+            </Link>
+            <Link
+              to="/"
+              onClick={handleLogout}
+              className={styles.user__link}
+            >
+              <b>Đăng xuất</b>
+            </Link>
           </div>
-        ) : (
+        </div>
+        : (
           <Link to="/dang-nhap" className={styles.login}>
             Đăng nhập
           </Link>
         )}
-        <MenuIcon
-          onClick={handleShow}
-          className={styles.btn__show}
-          sx={showStyle}
-        />
-      </div>
+      <MenuIcon
+        onClick={handleShow}
+        className={styles.btn__show}
+        sx={showStyle}
+      />
     </header>
   );
 }
