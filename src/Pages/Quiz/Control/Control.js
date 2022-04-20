@@ -30,7 +30,7 @@ function Control() {
             setIsDisablePrev(false)
         }
         else {
-            setIsDisablePrev(false)
+            setIsDisablePrev(true)
         }
     }, [index])
 
