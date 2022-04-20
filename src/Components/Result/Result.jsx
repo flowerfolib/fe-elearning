@@ -12,7 +12,8 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-
+import { getName } from "../../Utils/Common";
+import { api } from "../../Pages/Quiz/Provider";
 const columns = [
   { id: "name", label: "Họ và tên", minWidth: 170 },
   { id: "quiz", label: "Bài thi", minWidth: 100 },
@@ -45,24 +46,12 @@ function createData(name, quiz, numberofquiz, numberOfCorrect) {
 }
 
 const rows = [
-  createData("Nguyễn Văn A", "IN", 6, 6),
-  createData("Nguyễn Văn A", "CN", 6, 6),
-  createData("Nguyễn Văn A", "IT", 6, 6),
-  createData("Nguyễn Văn B", "US", 6, 6),
-  createData("Nguyễn Văn A", "CA", 6, 6),
-  createData("Nguyễn Văn A", "AU", 6, 6),
-  createData("Nguyễn Văn A", "DE", 6, 6),
-  createData("Nguyễn Văn A", "IE", 6, 6),
-  createData("Nguyễn Văn A", "MX", 6, 6),
-  createData("Nguyễn Văn A", "JP", 6, 6),
-  createData("Nguyễn Văn A", "FR", 6, 6),
-  createData("Nguyễn Văn B", "GB", 6, 6),
-  createData("Nguyễn Văn A", "RU", 6, 6),
-  createData("Nguyễn Văn A", "NG", 6, 6),
-  createData("Nguyễn Văn A", "BR", 6, 6),
+  createData(getName(), "IN", api.length, 6),
+
 ];
 
 export default function ColumnGroupingTable() {
+  console.log(api.question);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const ref = React.useRef();
