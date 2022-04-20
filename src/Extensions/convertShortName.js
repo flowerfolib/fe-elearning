@@ -9,6 +9,6 @@ export const convertShortName = (e) => {
         case 'ban-hien-tai':
             return 'ht';
         default:
-            return undefined
+            return ''
     }
 }

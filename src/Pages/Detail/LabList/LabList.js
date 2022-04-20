@@ -8,7 +8,6 @@ import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 function LabList() {
     const id = useLocation().search.replace('?', '')
     const { data } = useContext(DataContext);
-    console.log(data[id] && data[id].lesson)
     return (
         <>
             {/* <ul className={styles.lab__list}>
@@ -83,7 +82,8 @@ function LabList() {
                             >
                                 <span className={styles.lab__icon}>
                                     <i className="fa-solid fa-circle-play"></i>
-                                </span> {val.name}
+                                </span>
+                                <span>{val.name}</span>
                             </Link>
                             <div>
                             </div>
