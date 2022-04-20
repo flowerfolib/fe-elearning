@@ -34,6 +34,8 @@ function QuizList() {
     }
     return (
         <div className={`${styles.main}`}>
+
+                
             <Header />
 
             <h1 style={{ textAlign: "center", marginBottom: "20px" }}>Danh sách bài thi</h1>
@@ -53,12 +55,12 @@ function QuizList() {
                     </thead>
                     <tbody>
                         {listQ.map((e, index) => (
-                            <tr key={index} >
+                            <tr key={index}  >
                                 <td>{index + 1}</td>
                                 <td>{e.name}</td>
                                 <td>{e.time}</td>
                                 <td>{e.questionsLength}</td>
-                                <td className={`d-flex justify-content-center`}>{e.isComplete ? (<DoItNow />) : (<Done />)}</td>
+                                <td className={`d-flex justify-content-center`}>{e.isComplete ? <DoItNow /> : <Done />}</td>
 
                             </tr>
                         ))}
