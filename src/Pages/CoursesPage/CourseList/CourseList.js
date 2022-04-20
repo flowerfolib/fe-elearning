@@ -1,5 +1,5 @@
-import React, { memo, useContext, useEffect } from 'react'
-import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min'
+import React, { memo, useContext} from 'react'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import { useLocation } from "react-router-dom";
 import { DataContext } from '../../../Context/Context'
 import styles from './CourseList.module.css'

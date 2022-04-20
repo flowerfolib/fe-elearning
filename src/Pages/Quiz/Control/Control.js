@@ -2,8 +2,6 @@ import React, { useContext, useState, useEffect } from 'react'
 import styles from './Control.module.css'
 import { Context } from '../Provider'
 import clsx from 'clsx'
-import { listItemTextClasses } from '@mui/material'
-import zIndex from '@mui/material/styles/zIndex'
 
 
 function Control() {
@@ -15,7 +13,6 @@ function Control() {
         setIndex,
         list,
         listChecked,
-        setListChecked,
         isVisible,
         setIsVisible,
         isDisable,
