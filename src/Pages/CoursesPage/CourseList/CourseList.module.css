@@ -30,7 +30,7 @@
     font-size: .8rem;
     font-weight: 600;
     background-color: #ff4747;
-    padding:0 .6rem;
+    padding: 0 .6rem;
     color: #fff;
     top: 1rem;
     left: -10px;
@@ -51,10 +51,8 @@
 }
 
 .item__img {
-    position: relative;
-    top: 1px;
-    width: 100%;
     object-fit: contain;
+    height: 120px;
 }
 
 .item__title {

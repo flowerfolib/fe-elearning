@@ -44,8 +44,8 @@ function CourseList() {
                   <span className={styles.tag__new}>
                     New
                   </span>
-                  <div style={{ height: '180px', display: 'flex', alignItems: 'center', paddingTop: '60px' }}>
-                    <img src={val.avatar} alt="" />
+                  <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: '60px' }}>
+                    <img src={val.avatar} alt="" className={styles.item__img} />
                   </div>
                   <h3 className={styles.item__title}>
                     {val.name}

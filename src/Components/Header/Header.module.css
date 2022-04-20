@@ -17,7 +17,7 @@
     display: flex;
 }
 
-.logo img{
+.logo img {
     height: 3.8vw;
     margin: auto;
 }
@@ -26,6 +26,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 .btn__show {
@@ -44,7 +45,7 @@
     transition: .3s;
 }
 
-.item__link{
+.item__link {
     color: var(--text);
 }
 
@@ -109,10 +110,77 @@
     display: none;
 }
 
-/* ===================== TABLET & MOBILE CSS ===================== */
-@media (max-width: 64em) {
-
+.user {
+    position: relative;
 }
+
+.user__icon {
+    font-size: 1.6rem;
+    color: var(--primary);
+}
+
+.user__info {
+    position: absolute;
+    background-color: #fff;
+    width: max-content;
+    max-width: none;
+    padding: 1rem;
+    transform: translateX(-50%) scale(0);
+    transform-origin: 50% -10%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 60px;
+    left: 50%;
+    filter: drop-shadow(0 0 5px var(--primary));
+    z-index: -1;
+    transition: .1s linear;
+    opacity: 0;
+    will-change: opacity, transform;
+}
+
+.user__info::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 20px solid;
+    border-color: transparent transparent #fff transparent;
+    bottom: 100%;
+}
+
+.user__info::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    height: 50px;
+    z-index: -1;
+}
+
+.user__info:hover,
+.user__icon:hover~.user__info {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+
+.user__name {
+    font-size: 1rem;
+    display: block;
+    padding: .5rem 0;
+    margin: 0;
+}
+
+.user__link {
+    font-size: 1rem;
+    padding: .5rem 0;
+    color: var(--primary-dark);
+}
+
+
+/* ===================== TABLET & MOBILE CSS ===================== */
+@media (max-width: 64em) {}
 
 /* ========================== TABLET CSS ========================== */
 @media (min-width: 48em) and (max-width: 64em) {
@@ -134,7 +202,7 @@
     .btn__show {
         display: block !important;
     }
-    
+
     .logo img {
         height: 10vw;
     }

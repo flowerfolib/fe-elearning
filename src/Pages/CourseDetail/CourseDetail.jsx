@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./CourseDetail.module.css";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import Introduce from "./Introduce/Introduce";
 import Comment from "./Comment/Comment";
 import Analyst from "./Analyst/Analyst";
 import Share from "./Share/Share";
 import LabList from "../Detail/LabList/LabList";
+import { DataContext } from "../../Context/Context";
 
 function CourseDetail() {
+  const { data } = useContext(DataContext)
   const [content, setContent] = useState(1);
   const handleClick = (e) => {
     setContent(+e.target.dataset.content);
@@ -17,6 +19,10 @@ function CourseDetail() {
     document.querySelector('.' + styles.nav__item + '.' + styles.active).classList.remove(styles.active)
     e.target.parentElement.classList.add(styles.active)
   };
+  const currCate = useLocation().hash.split('#')[1]
+  const currLab = useLocation().hash.split('#')[2]
+  const id = useLocation().search.replace('?', '')
+  const linkVid = data[id]?.lesson[currCate].slides[currLab].url.replace("watch?v=", "embed/")
   return (
     <>
       <Header />
@@ -24,65 +30,61 @@ function CourseDetail() {
         <div className="row">
           <div className={`${styles.courseContent} col-md-8`}>
             <iframe
-              className={`my-2 ${styles.courseVideo}`}
-              width="100%"
-              height="50%"
-              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              src={linkVid}
+              allowFullScreen
+              className={styles.courseVideo}
             ></iframe>
             <ul className={styles.nav}>
-              <li className={ `${styles.nav__item} ${styles.active}`}>
-                <Link
-                  to="/khoa-hoc/chi-tiet/lab/gioi-thieu"
+              <li className={`${styles.nav__item} ${styles.active}`}>
+                <p
                   onClick={handleClick}
                   data-content={1}
                   className={styles.nav__link}
                 >
                   Giới thiệu
-                </Link>
+                </p>
               </li>
               <li className={styles.nav__item}>
-                <Link
-                  to="/khoa-hoc/chi-tiet/lab/binh luan"
+                <p
                   onClick={handleClick}
                   data-content={2}
                   className={styles.nav__link}
                 >
                   Bình luận
-                </Link>
+                </p>
               </li>
               <li className={styles.nav__item}>
-                <Link
-                  to="/khoa-hoc/chi-tiet/lab/thong-ke"
+                <p
                   onClick={handleClick}
                   data-content={3}
                   className={styles.nav__link}
                 >
                   Thống kê
-                </Link>
+                </p>
               </li>
               <li className={styles.nav__item}>
-                <Link
-                  to="/khoa-hoc/chi-tiet/lab/chia-se"
+                <p
+                  to="/khoa-hoc/chi-tiet/lab"
                   onClick={handleClick}
                   data-content={4}
                   className={styles.nav__link}
                 >
                   Chia sẻ
-                </Link>
+                </p>
               </li>
             </ul>
             <div className="container">
               <div className="row py-5">
                 <div >
-                  {content === 1 ? (
-                    <Introduce/>
-                  ) : content === 2 ? (
-                    <Comment/>
-                  ) : content === 3 ? (
-                    <Analyst/>
-                  ) : (
-                    <Share/>
-                  )}
+                  {content === 1 ?
+                    <Introduce />
+                    : content === 2 ?
+                      <Comment />
+                      : content === 3 ?
+                        <Analyst />
+                        :
+                        <Share />
+                  }
                 </div>
               </div>
             </div>
@@ -90,7 +92,7 @@ function CourseDetail() {
           <div className={`col-md-4`}>
             <div className={`${styles.courseList}`}>
               <h2 className={`${styles.listTitle}`}>Nội dung khóa học</h2>
-                    <LabList/>
+              <LabList />
             </div>
           </div>
         </div>
