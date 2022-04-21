@@ -9,17 +9,18 @@ import {
 
 function Share() {
   const currentLocation = window.location.href;
-  console.log(currentLocation);
   return (
-    <div>
+    <div >
       <FacebookShareButton
         url={currentLocation}
         quote={"Đào tạo Diligo"}
         hashtag={"#daotao_diligo"}
         description={"aiueo"}
+        className="mb-2"
       >
         <FacebookIcon size={48} round /> Chia sẻ lên Facbook
       </FacebookShareButton>
+      <br/>
       <FacebookMessengerShareButton url={currentLocation}>
         <FacebookMessengerIcon size={48} round /> Chia sẻ lên Messenger
       </FacebookMessengerShareButton>
