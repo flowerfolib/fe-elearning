@@ -100,6 +100,15 @@
    .course__item {
       width: 100%;
    }
+   
+.img__wrap{
+   display: flex;
+   justify-content: center;
+   height: 60vh;
+}
+.img{
+   height: 30vh;
+}
 }
 
 /* ========================== TABLET CSS ========================== */

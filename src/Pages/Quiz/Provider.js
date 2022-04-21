@@ -37,7 +37,7 @@ export const listQ=[
       questionsLength: 4,
       isComplete:false
      },{
-      name: "Phải làm sao, phải làm sao",
+      name: "Phật pháp nhiệm màu",
       time: "60 phút",
       questionsLength: 40,
       isComplete:true
@@ -47,12 +47,12 @@ export const listQ=[
       questionsLength: 20,
       isComplete:true
      },{
-      name: "Những thằng khác ngại tán em",
+      name: "Phật ở trong tâm",
       time: "60 phút",
       questionsLength: 10,
       isComplete:false
      },{
-      name: "Tại ngán anh",
+      name: "Phật pháp nhiệm màu",
       time: "60 phút",
       questionsLength: 50,
       isComplete:true

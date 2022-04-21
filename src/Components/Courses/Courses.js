@@ -43,14 +43,7 @@ function Courses() {
           </p>
         </div>
         <ul className={styles.course__list}>
-          {/* <li className={styles.course__item}>
-            <Link to="" className={styles.course__link}>
-              <div className={styles.img__wrap}>
-                <img src={course} alt="" className={styles.img} />
-              </div>
-              <h3 className={styles.item__title}>Hội nhập văn hóa</h3>
-            </Link>
-          </li> */}
+
 
           {routerLink
             ? data
