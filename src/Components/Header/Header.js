@@ -9,7 +9,6 @@ import {
   getLink,
   removeUserSession,
 } from "../../Utils/Common";
-import { useLocation } from "react-router-dom";
 
 function Header(props) {
   const token = getToken();
@@ -26,17 +25,11 @@ function Header(props) {
     fontSize: "10vw",
     color: "var(--text)",
   };
-  const handleShow = e => {
+  const handleShow = () => {
     if (window.innerWidth <= 1024) {
       setShow(!show);
     }
-  }
-  const path = useLocation().pathname.split('/')[1]
-  console.log(path)
-  useEffect(() => {
-    const currItem = document.querySelector(`.${styles.item__link}[data-path="${path}"]`)
-    currItem.classList.add(styles.active)
-  }, [path])
+  };
   useEffect(() => {
     if (show) {
       const lastItem = navRef.current.lastChild;
@@ -53,12 +46,7 @@ function Header(props) {
       </Link>
       <ul ref={navRef} className={styles.nav}>
         <li className={styles.item}>
-          <Link
-            onClick={handleShow}
-            to="/"
-            className={styles.item__link}
-            data-path=""
-          >
+          <Link onClick={handleShow} to="/" className={styles.item__link}>
             Trang chủ
           </Link>
         </li>
@@ -67,28 +55,17 @@ function Header(props) {
             onClick={handleShow}
             to="/khoa-hoc"
             className={styles.item__link}
-            data-path="khoa-hoc"
           >
             Khóa học
           </Link>
         </li>
         <li className={styles.item}>
-          <Link
-            onClick={handleShow}
-            to="/ky-thi"
-            className={styles.item__link}
-            data-path="ky-thi"
-          >
+          <Link onClick={handleShow} to="/ky-thi" className={styles.item__link}>
             Kỳ thi
           </Link>
         </li>
         <li className={styles.item}>
-          <Link
-            onClick={handleShow}
-            to="/ho-tro"
-            className={styles.item__link}
-            data-path="ho-tro"
-          >
+          <Link onClick={handleShow} to="/ho-tro" className={styles.item__link}>
             Hỗ trợ
           </Link>
         </li>
