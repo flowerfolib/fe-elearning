@@ -1,8 +1,15 @@
+import axios from 'axios'
 import React from 'react'
 import styles from './Banner.module.css'
-
+import {
+    getName,
+  } from "../../../Utils/Common";
 
 function Banner({ data }) {
+    const name = getName()
+    const handleSubmit = (e) =>{
+        console.log(name)
+    }
         return <>
             {data &&
                 <div className={styles.main} >
@@ -20,6 +27,7 @@ function Banner({ data }) {
                                         className={styles.desc}
                                         dangerouslySetInnerHTML={{ __html: data.description.replaceAll('<p>', '').split('</p>')[0].italics() }}
                                     />
+                                    <input type="submit" value="Tham gia" onClick={handleSubmit}/>
                                 </div>
                             </div>
                         </div>
