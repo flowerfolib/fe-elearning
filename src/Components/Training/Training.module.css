@@ -2,6 +2,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
 }
 
 .title {
@@ -110,43 +111,22 @@
     color: var(--text);
 }
 
-/* ===================== TABLET & MOBILE CSS ===================== */
-@media (max-width: 64em) {}
 
-/* ========================== TABLET CSS ========================== */
-@media (min-width: 48em) and (max-width: 64em) {}
+/* -------------------------mobile--------------------- */
+@media only screen and  (max-width: 739px){
 
-/* ===================== MOBILE CSS ===================== */
-@media (max-width: 48em) {
-    .title {
-        font-size: 10vw;
+}
+
+
+/* -------------------------iPads & tablets--------------------- */
+@media only screen and (min-width: 740px)and (max-width: 1023px){
+    .train__list{
+
     }
-
-    .nav {
-        margin: 10vw 0 2vw;
-        overflow-x: auto;
+    .train__item{
+        padding:10px;
     }
-
-    .nav__link {
-        font-size: 5vw;
-        display: inline-block;
-        width: max-content;
-    }
-
-    .nav__line {
-        display: none;
-    }
-
-    .train__list {
-        margin: 0;
-        width: 100%;
-    }
-
-    .train__item {
-        width: 100%;
-    }
-
-    .train__title {
-        font-size: 5vw;
-    }
+}
+/* -------------------------desktop--------------------- */
+@media only screen and  (max-width: 1024px){
 }

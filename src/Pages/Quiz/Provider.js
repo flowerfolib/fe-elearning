@@ -37,7 +37,9 @@ export const listQ=[
       questionsLength: 4,
       isComplete:false
      },{
-      name: "Kỹ năng mềm",
+
+      name: "Phật pháp nhiệm màu",
+
       time: "60 phút",
       questionsLength: 40,
       isComplete:true
@@ -47,12 +49,16 @@ export const listQ=[
       questionsLength: 20,
       isComplete:true
      },{
-      name: "Tiếng anh cho người đi làm",
+
+      name: "Phật ở trong tâm",
+
       time: "60 phút",
       questionsLength: 10,
       isComplete:false
      },{
-      name: "Kiến thức công nghệ thông tin",
+
+      name: "Phật pháp nhiệm màu",
+
       time: "60 phút",
       questionsLength: 50,
       isComplete:true

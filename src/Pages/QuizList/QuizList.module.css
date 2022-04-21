@@ -19,7 +19,7 @@
     border-radius: 30px;
     background-color: var(--primary-light);
     color: #fff;
-    padding: 5px;
+    padding: 5px 20px;
 }
 .disable {
     background-color: #ddd;

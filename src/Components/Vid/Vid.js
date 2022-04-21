@@ -9,9 +9,10 @@ function Vid() {
       <div className={styles.wrap}>
         {/* <video ref={vidRef} controls muted src={edumaVideo} className={styles.vid} /> */}
         <iframe
+        title = "video"
           ref={vidRef}
-          width="1268"
-          height="713"
+          width="800"
+          height="600"
           className={styles.vid}
           src="https://www.youtube.com/embed/3V0jdXteJdQ"
           allowFullScreen />
