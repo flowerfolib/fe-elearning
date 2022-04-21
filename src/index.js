@@ -8,9 +8,11 @@ import CourseDetail from './Pages/CourseDetail/CourseDetail';
 import CoursesPage from './Pages/CoursesPage/CoursesPage';
 import Detail from './Pages/Detail/Detail';
 import Home from './Pages/Home/Home';
+import QuizList from './Pages/QuizList/QuizList'
 import Quiz from './Pages/Quiz';
 import Signin from './Pages/Account/SignIn';
 import Support from './Pages/Support/Support.js';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,7 +22,8 @@ ReactDOM.render(
           <Route exact path={"/"} component={Home} />
           <Route exact path={"/khoa-hoc"} component={CoursesPage} />
           <Route exact path={"/khoa-hoc/:name"} component={CoursesPage} />
-          <Route path={"/ky-thi"} component={Quiz} />
+          <Route path={"/ky-thi"} component={QuizList} />
+           <Route path={"/bai-thi"} component={Quiz} /> 
           <Route exact path={"/khoa-hoc/chi-tiet/:name"} component={Detail} />
           <Route path={"/khoa-hoc/chi-tiet/:name/lab"} component={CourseDetail} />
           <Route exact path={"/ho-tro"} component={Support} />

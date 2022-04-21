@@ -40,6 +40,7 @@ function Training() {
     };
     window.addEventListener("load", handleLoad());
   }, []);
+
   return (
     <div className={styles.main}>
       <h2 className={styles.title}>Đào tạo nội bộ</h2>

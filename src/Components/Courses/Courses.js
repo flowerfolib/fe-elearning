@@ -58,7 +58,7 @@ function Courses() {
               .map((val, index) => {
                 if (val.department === "orientation_integration") {
                   return (
-                    <li key={index} className={styles.course__item}>
+                    <li key={index} className={styles.course__item} >
                       <Link
                         to={{
                           pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
@@ -66,7 +66,7 @@ function Courses() {
                         }}
                         className={styles.course__link}
                       >
-                        <div className={styles.img__wrap}>
+                        <div className={`${styles.img__wrap}`} style={{}}>
                           <img src={val.avatar} alt="" className={styles.img} />
                         </div>
                         <h3 className={styles.item__title}>{val.name}</h3>

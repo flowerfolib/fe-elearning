@@ -37,7 +37,7 @@
 }
 
 .course__item {
-   width: calc(100%/3);
+   width: calc(100% / 3);
    padding: 10px;
 }
 
@@ -49,7 +49,9 @@
    display: block;
    padding: 20px;
    border-radius: 10px;
-   transition: .3s ease-in-out;
+   transition: 0.3s ease-in-out;
+   display: flex;
+   flex-direction: column;
 }
 
 .course__link:hover {
@@ -58,9 +60,12 @@
 }
 
 .img__wrap {
+   display: flex;
+   align-items: center;
    padding: 20px;
    border-radius: 10px;
-   transition: .3s ease-in-out;
+   transition: 0.3s ease-in-out;
+   flex: 1;
 }
 
 .course__link:hover .img__wrap {
@@ -76,8 +81,6 @@
    margin-top: 48px;
    color: var(--text);
 }
-
-
 
 /* ===================== TABLET & MOBILE CSS ===================== */
 @media (max-width: 64em) {
@@ -100,7 +103,8 @@
 }
 
 /* ========================== TABLET CSS ========================== */
-@media (min-width: 48em) and (max-width: 64em) {}
+@media (min-width: 48em) and (max-width: 64em) {
+}
 
 /* ===================== MOBILE CSS ===================== */
 @media (max-width: 48em) {
