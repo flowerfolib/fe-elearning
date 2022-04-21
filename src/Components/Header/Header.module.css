@@ -47,12 +47,10 @@
 
 .item__link {
     color: var(--text);
-}
-
-.item__link {
     padding: .5vw;
     position: relative;
 }
+
 
 .item__link::after {
     content: '';
@@ -63,16 +61,16 @@
     left: 0;
     top: 100%;
     border-radius: 3px;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
+    opacity: 0;
 }
 
-.item__link:hover::after {
-    transform: scaleX(1);
-}
-
-.item__link:hover {
+.item__link:hover,
+.item__link.active {
     color: var(--primary);
+}
+
+.active.item__link::after {
+    opacity: 1;
 }
 
 .login {

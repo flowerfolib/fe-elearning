@@ -51,9 +51,6 @@ export const DataProvider = ({ children }) => {
             .then(result => result.json())
             .then(data => {
                 setData(data.data)
-                data.data.forEach(val => {
-                    console.log(val.department)
-                })
             })
     }, [])
     useEffect(() => {
