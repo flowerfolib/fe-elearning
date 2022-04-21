@@ -49,12 +49,12 @@
 .nav__item.active{
     background-color:red;
 }
-.nav__item.active>a{
-    color:#ffffff;
+.nav__item.active>p{
+    color:#ffffff!important;
 }
 
 .nav__link:hover {
-    background-color: rgba(238, 238, 238, 0.2);
+    background-color: rgb(255, 203, 203);
     color: #eee;
 }
 
