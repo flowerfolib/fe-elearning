@@ -67,41 +67,6 @@ function Training() {
         ))}
 
 
-        {/* <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban cung ứng
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban công nghệ
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban kiểm soát
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban hiền tài
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban PTKH
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban PTTH và SP
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban tài chính kế toán
-          </Link>
-        </li> */}
       </ul>
       <ul className={styles.train__list}>
 
@@ -125,79 +90,8 @@ function Training() {
             </li>
           ))}
 
-        {/* {routerLink
-          ? data
-            .filter((item) => item.department === routerLink)
-            .map((val, index) => (
-              <li key={index} className={styles.course__item}>
-                <Link
-                  to={{
-                    pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
-                  }}
-                  className={styles.course__link}
-                >
-                  <div className={styles.img__wrap}>
-                    <img src={val.avatar} alt="" className={styles.img} />
-                  </div>
-                  <h3 className={styles.item__title}>{val.name}</h3>
-                </Link>
-              </li>
-            ))
-
-
-          : data.map((val, index) => (
-            <li key={index} className={styles.train__item}>
-              <Link
-                to={{
-                  pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
-                }}
-                className={styles.train__link}
-              >
-                <img src={val.avatar} alt="" className={styles.train__img} />
-
-                <p className={styles.train__title}>{val.name}</p>
-              </Link>
-            </li>
-          ))}  */}
-
-
-
-        {/* <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li>
-        <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li>
-        <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li>
-        <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li>
-        <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li>
-        <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li> */}
+        
+        
       </ul>
     </div>
   );

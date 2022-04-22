@@ -14,3 +14,13 @@
     left: 50px;
     -webkit-user-drag: none;
 }
+
+    
+    /* ------------------------- tablets & mobile--------------------- */
+    @media only screen and (max-width: 1023px){
+
+        .main{
+            height: fit-content;
+                
+            }
+    }

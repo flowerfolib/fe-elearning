@@ -74,6 +74,7 @@
 
 .img {
    border-radius: 10px;
+   object-fit: contain;
 }
 
 .item__title {
@@ -112,11 +113,16 @@
 }
 
 /* ========================== TABLET CSS ========================== */
-@media (min-width: 48em) and (max-width: 64em) {
+@media only screen and (min-width: 740px)and (max-width: 1023px){
+   .course__item {
+      width: calc(100% / 2);
+      padding: 10px;
+   }
 }
 
 /* ===================== MOBILE CSS ===================== */
-@media (max-width: 48em) {
+@media only screen and  (max-width: 739px){
+
    .main {
       padding: 10vw 0;
    }

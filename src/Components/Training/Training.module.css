@@ -2,7 +2,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .title {
@@ -115,18 +115,36 @@
 /* -------------------------mobile--------------------- */
 @media only screen and  (max-width: 739px){
 
+    .nav__link{
+        font-size: 20px;
+    }
+    .train__list{
+        margin-bottom: 20px;
+    }
+    .train__item{
+        padding:10px;
+    }
+
+    .train__link{
+        padding:5px;
+    }
 }
+
 
 
 /* -------------------------iPads & tablets--------------------- */
 @media only screen and (min-width: 740px)and (max-width: 1023px){
+    .nav__link{
+        font-size: 20px;
+    }
     .train__list{
+        margin-bottom: 40px;
 
     }
     .train__item{
         padding:10px;
     }
-}
-/* -------------------------desktop--------------------- */
-@media only screen and  (max-width: 1024px){
+    .train__link{
+        padding:5px;
+    }
 }
