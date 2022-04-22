@@ -32,7 +32,6 @@ function Header(props) {
     }
   }
   const path = useLocation().pathname.split('/')[1]
-  console.log(path)
   useEffect(() => {
     const currItem = document.querySelector(`.${styles.item__link}[data-path="${path}"]`)
     currItem.classList.add(styles.active)
