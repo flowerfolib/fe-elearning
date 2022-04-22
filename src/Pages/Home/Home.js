@@ -12,7 +12,7 @@ function Home() {
     <Header />
     <Hero  />
     <Courses />
-    <Vid />
+    {/* <Vid /> */}
     <Training />
     <Footer />
   </>
