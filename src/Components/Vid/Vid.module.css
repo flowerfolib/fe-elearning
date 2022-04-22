@@ -6,9 +6,8 @@
 
 .wrap {
     margin: auto;
-    width: 50%;
+    padding:20px;
     background-color: #eee;
-    padding: 50px;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     display: flex;
@@ -17,7 +16,7 @@
 }
 
 .vid {
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 /* ===================== TABLET & MOBILE CSS ===================== */

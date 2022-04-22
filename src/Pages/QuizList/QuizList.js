@@ -7,11 +7,12 @@ import Footer from '../../Components/Footer/Footer'
 
 import logo from '../../Assets/Images/logo.png'
 import { flexbox } from '@mui/system';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function QuizList() {
-
+    AOS.init()
     const DoItNow = function () {
         return (
             <Link
@@ -33,19 +34,29 @@ function QuizList() {
         )
     }
     return (
+        <div className={`${styles.container}`}>
+            <Header />
+        
         <div className={`${styles.main}`}>
 
                 
-            <Header />
 
-            <h1 style={{ textAlign: "center", marginBottom: "20px" }}>Danh sách bài thi</h1>
+            <h1 
+                style={{ textAlign: "center", marginBottom: "20px" } }
+                data-aos="fade-down" 
+                data-aos-duration="2000"
+            >Danh sách bài thi</h1>
 
-            <div className={`${styles.list}`}>
+            <div 
+                className={`${styles.list}`}
+                data-aos="fade-down" 
+                data-aos-duration="1000"
+            >
 
 
                 <Table striped hover>
                     <thead>
-                        <tr>
+                        <tr>    
                             <th>#</th>
                             <th>Tên bài thi</th>
                             <th>Thời gian</th>
@@ -69,8 +80,10 @@ function QuizList() {
                 </Table>
 
             </div>
-            <Footer />
 
+
+        </div>
+        <Footer />
 
         </div>
 
