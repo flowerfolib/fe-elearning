@@ -37,27 +37,33 @@ export const listQ=[
       questionsLength: 4,
       isComplete:false
      },{
+
       name: "Phật pháp nhiệm màu",
+
       time: "60 phút",
       questionsLength: 40,
       isComplete:true
      },{
-      name: "Tìm đường về nhà",
+      name: "Kỹ năng sử dụng Excel văn phòng",
       time: "60 phút",
       questionsLength: 20,
       isComplete:true
      },{
+
       name: "Phật ở trong tâm",
+
       time: "60 phút",
       questionsLength: 10,
       isComplete:false
      },{
+
       name: "Phật pháp nhiệm màu",
+
       time: "60 phút",
       questionsLength: 50,
       isComplete:true
      },{
-      name: "Đường về xứ Phật",
+      name: "Tiêu chuẩn ISO",
       time: "60 phút",
       questionsLength: 10,
       isComplete:false
