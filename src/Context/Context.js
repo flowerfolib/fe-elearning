@@ -54,6 +54,7 @@ export const DataProvider = ({ children }) => {
                 setData(data.data)
             })
     }, [])
+    
     useEffect(() => {
         const root = data.map(val => val.department)
         setCates([...new Set(root)].map(val => decryption[val]))
@@ -61,6 +62,7 @@ export const DataProvider = ({ children }) => {
     useEffect(() => {
         setCurrentList(data.filter(val => val.department === current))
     }, [current])
+
     const value = {
         data,
         cates,
