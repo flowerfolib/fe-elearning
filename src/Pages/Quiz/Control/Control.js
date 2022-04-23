@@ -69,7 +69,7 @@ function Control() {
                     </span>
                 </div>
             </div>
-            <div className={`d-flex justify-content-between align-items-center w-100 pt-4 px-5`}>
+            <div className={`d-flex justify-content-between align-items-center w-100 pt-4 px-5 ${styles.btn__wrapper}`}>
                 <button
                     disabled={isDisablePrev}
 

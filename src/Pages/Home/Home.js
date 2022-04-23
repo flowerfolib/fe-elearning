@@ -10,9 +10,9 @@ import styles from './Home.module.css'
 function Home() {
   return <>
     <Header />
-    <Hero />
+    <Hero  />
     <Courses />
-    <Vid />
+    {/* <Vid /> */}
     <Training />
     <Footer />
   </>

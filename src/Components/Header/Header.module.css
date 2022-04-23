@@ -92,7 +92,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: rotate(45deg) translateY(-200%) scaleY(4);
+    transform: rotate(45deg) translateY(-200%) translateX(10px) scaleY(4);
     transition: transform .3s linear;
 }
 

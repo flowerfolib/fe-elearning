@@ -6,8 +6,10 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { DataContext } from "../../Context/Context";
 import { convertShortName } from "../../Extensions/convertShortName";
 import { toSlug } from "../../Extensions/Extensions";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function Courses() {
+   AOS.init()  
   let routerLink = convertShortName(
     useLocation().pathname.replace("/khoa-hoc", "")
   );
@@ -31,27 +33,19 @@ function Courses() {
   }, []);
   return (
     <>
-      <section className={styles.main}>
-        <div ref={introRef} className={styles.intro}>
+ 
+      <section className={styles.main}     >
+        <div ref={introRef} className={styles.intro}data-aos="fade-right" data-aos-duration="1000"  >
           <h2 className={styles.intro__title}>
             Hội nhập văn hóa Diligo Holdings
           </h2>
-          <p className={styles.intro__content}>
+          <p className={styles.intro__content}  data-aos="fade-right" data-aos-duration="2000">
             Công tác đào tạo nhân viên, đào tạo chi nhánh, nhà máy, nhà phân
             phối, thi và kiểm tra, thống kê việc học tập lên môi trường đào tạo
             trực tuyến 100%
           </p>
         </div>
         <ul className={styles.course__list}>
-          {/* <li className={styles.course__item}>
-            <Link to="" className={styles.course__link}>
-              <div className={styles.img__wrap}>
-                <img src={course} alt="" className={styles.img} />
-              </div>
-              <h3 className={styles.item__title}>Hội nhập văn hóa</h3>
-            </Link>
-          </li> */}
-
           {routerLink
             ? data
               .filter((item) => item.department === routerLink)
@@ -75,10 +69,10 @@ function Courses() {
                   )
                 }
               })
-            : data.map((val, index) => {
-              if (val.department === "orientation_integration") {
+            : data.filter(val => val.department === 'orientation_integration').map((val, index) => {
+              if (index < 6) {
                 return (
-                  <li key={index} className={styles.course__item}>
+                   <li key={index} className={styles.course__item} data-aos="zoom-in" data-aos-duration="1000" >
                     <Link
                       to={{
                         pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
@@ -97,8 +91,10 @@ function Courses() {
             })}
         </ul>
       </section>
+      
     </>
   );
+  
 }
 
 export default Courses;

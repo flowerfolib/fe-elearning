@@ -1,6 +1,11 @@
-.main {
-    padding: 20rem 0;
+.container{
     background: url(../../Assets/Images/quiz/background.png);
+    height:100vh;
+    background-size: cover ;
+}
+.main {
+    padding-top: 200px;
+    position: relative;
 }
 .list {
     margin: auto;
@@ -19,9 +24,33 @@
     border-radius: 30px;
     background-color: var(--primary-light);
     color: #fff;
-    padding: 5px;
+    padding: 5px 20px;
 }
 .disable {
     background-color: #ddd;
     color: #000;
+}
+
+/* -------------------------mobile--------------------- */
+@media only screen and  (max-width: 739px){
+.container{
+    padding-bottom: 100px;
+    height:fit-content;
+
+}
+}
+.list{
+    width: 70%;
+}
+
+
+
+/* -------------------------iPads & tablets--------------------- */
+@media only screen and (min-width: 740px)and (max-width: 1023px){
+    .container{
+        padding-bottom: 100px;
+    height:fit-content;
+
+    }
+
 }

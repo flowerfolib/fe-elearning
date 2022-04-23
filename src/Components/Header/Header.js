@@ -32,7 +32,6 @@ function Header(props) {
     }
   }
   const path = useLocation().pathname.split('/')[1]
-  console.log(path)
   useEffect(() => {
     const currItem = document.querySelector(`.${styles.item__link}[data-path="${path}"]`)
     currItem.classList.add(styles.active)
@@ -104,28 +103,7 @@ function Header(props) {
         </li>
       </ul>
       {token ?
-        // (
-        //   <div className={"position-relative " + styles.user__info}>
-        //     Xin chào <span className={styles.uid}>{names}</span>
-        //     <ul
-        //       className={`${styles.toggleUser} overflow-hidden position-absolute top-100 end-0`}
-        //     >
-        //       <li>
-        //         <Link
-        //           to={{ pathname: `http://hrm.diligo.vn/web?db=diligo_hrms` }}
-        //           target="_blank"
-        //         >
-        //           Ứng dụng
-        //         </Link>
-        //       </li>
-        //       <li>
-        //         <Link to="/" onClick={handleLogout}>
-        //           <b>Đăng xuất</b>
-        //         </Link>
-        //       </li>
-        //     </ul>
-        //   </div>
-        // )
+       
         <div className={styles.user}>
           <i
             className={"fa-solid fa-user " + styles.user__icon}

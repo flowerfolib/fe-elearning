@@ -2,6 +2,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .title {
@@ -110,43 +111,40 @@
     color: var(--text);
 }
 
-/* ===================== TABLET & MOBILE CSS ===================== */
-@media (max-width: 64em) {}
 
-/* ========================== TABLET CSS ========================== */
-@media (min-width: 48em) and (max-width: 64em) {}
+/* -------------------------mobile--------------------- */
+@media only screen and  (max-width: 739px){
 
-/* ===================== MOBILE CSS ===================== */
-@media (max-width: 48em) {
-    .title {
-        font-size: 10vw;
+    .nav__link{
+        font-size: 20px;
+    }
+    .train__list{
+        margin-bottom: 20px;
+    }
+    .train__item{
+        padding:10px;
     }
 
-    .nav {
-        margin: 10vw 0 2vw;
-        overflow-x: auto;
+    .train__link{
+        padding:5px;
     }
+}
 
-    .nav__link {
-        font-size: 5vw;
-        display: inline-block;
-        width: max-content;
+
+
+/* -------------------------iPads & tablets--------------------- */
+@media only screen and (min-width: 740px)and (max-width: 1023px){
+    .nav__link{
+        font-size: 20px;
     }
+    .train__list{
+        margin-bottom: 40px;
 
-    .nav__line {
-        display: none;
     }
-
-    .train__list {
-        margin: 0;
-        width: 100%;
+    .train__item{
+        padding:10px;
     }
-
-    .train__item {
-        width: 100%;
-    }
-
-    .train__title {
-        font-size: 5vw;
+    .train__link{
+        padding:5px;
     }
 }

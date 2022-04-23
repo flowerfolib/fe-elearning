@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useContext } from "react";
+import React, { useEffect, useRef, useContext, componentDidMount } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useLocation } from "react-router-dom";
 import styles from "./Training.module.css";
@@ -6,8 +6,11 @@ import trainIm from "../../Assets/Images/courses.png";
 import { DataContext } from "../../Context/Context";
 import { convertShortName } from "../../Extensions/convertShortName";
 import { toSlug } from "../../Extensions/Extensions";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function Training() {
+
+  AOS.init()
   let routerLink = convertShortName(
     useLocation().pathname.replace("/khoa-hoc/", "")
   );
@@ -23,13 +26,16 @@ function Training() {
     const width = e.target.offsetWidth;
     lineRef.current.style.left = left + "px";
     lineRef.current.style.width = width + "px";
-    document
-      .querySelector("." + styles.nav__item + "." + styles.active)
-      .classList.remove(styles.active);
-    e.target.closest("." + styles.nav__item).classList.add(styles.active);
+    // document
+    //   .querySelector("." + styles.nav__item + "." + styles.active)
+    //   .classList.remove(styles.active);
+    // e.target.closest("." + styles.nav__item).classList.add(styles.active);
 
     setDepart(e.target.closest("li").dataset.department)
+
   };
+
+
   useEffect(() => {
     const handleLoad = () => {
       const left = firstChild.current.offsetLeft;
@@ -40,6 +46,7 @@ function Training() {
     };
     window.addEventListener("load", handleLoad());
   }, []);
+
 
   return (
     <div className={styles.main}>
@@ -67,48 +74,18 @@ function Training() {
         ))}
 
 
-        {/* <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban cung ứng
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban công nghệ
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban kiểm soát
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban hiền tài
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban PTKH
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban PTTH và SP
-          </Link>
-        </li>
-        <li className={styles.nav__item}>
-          <Link to="" onClick={handleClick} className={styles.nav__link}>
-            Ban tài chính kế toán
-          </Link>
-        </li> */}
       </ul>
       <ul className={styles.train__list}>
 
         {data
           .filter((item) => depart ? item.department === depart : item.department !== depart)
           .map((val, index) => (
-            <li key={index} className={styles.train__item}>
+            <li 
+              key={index} 
+              className={styles.train__item} 
+              data-aos-duration="2000"
+              data-aos={index%2===0 ? "flip-up" : "flip-right"}
+            >
               <Link
                 to={{
                   pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
@@ -125,79 +102,8 @@ function Training() {
             </li>
           ))}
 
-        {/* {routerLink
-          ? data
-            .filter((item) => item.department === routerLink)
-            .map((val, index) => (
-              <li key={index} className={styles.course__item}>
-                <Link
-                  to={{
-                    pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
-                  }}
-                  className={styles.course__link}
-                >
-                  <div className={styles.img__wrap}>
-                    <img src={val.avatar} alt="" className={styles.img} />
-                  </div>
-                  <h3 className={styles.item__title}>{val.name}</h3>
-                </Link>
-              </li>
-            ))
-
-
-          : data.map((val, index) => (
-            <li key={index} className={styles.train__item}>
-              <Link
-                to={{
-                  pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
-                }}
-                className={styles.train__link}
-              >
-                <img src={val.avatar} alt="" className={styles.train__img} />
-
-                <p className={styles.train__title}>{val.name}</p>
-              </Link>
-            </li>
-          ))}  */}
-
-
-
-        {/* <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li>
-        <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li>
-        <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li>
-        <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li>
-        <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li>
-        <li className={styles.train__item}>
-          <Link className={styles.train__link}>
-            <img src={trainImg} alt="" className={styles.train__img} />
-            <p className={styles.train__title}>Đường về xứ Phật</p>
-          </Link>
-        </li> */}
+        
+        
       </ul>
     </div>
   );
