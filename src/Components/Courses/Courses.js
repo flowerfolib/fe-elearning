@@ -68,9 +68,10 @@ function Courses() {
                   )
                 }
               })
-            : data.map((val, index) => {
 
-              if (val.department === "orientation_integration") {
+            : data.filter(val => val.department === 'orientation_integration').map((val, index) => {
+              if (index < 6) {
+
                 return (
                    <li key={index} className={styles.course__item} data-aos="zoom-in" data-aos-duration="1000" >
                     <Link
