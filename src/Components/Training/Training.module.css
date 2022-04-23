@@ -59,9 +59,9 @@
 }
 
 .train__link {
-    padding: 20px;
+    padding:  20px 20px 0 20px;
     display: block;
-    border-radius: 20px;
+    border-radius: 25px;
     position: relative;
     overflow: hidden;
     transition: 0.2s ease-in-out;
@@ -92,8 +92,9 @@
 }
 
 .train__img {
-    border-radius: 20px;
-    object-fit: contain;
+    border-radius: 15px;
+    object-fit: cover;
+
 }
 
 .test {

@@ -4,9 +4,6 @@ import { listQ } from '../Quiz/Provider'
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
-
-import logo from '../../Assets/Images/logo.png'
-import { flexbox } from '@mui/system';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

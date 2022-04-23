@@ -50,9 +50,11 @@ export const DataProvider = ({ children }) => {
         fetch('http://test.diligo.vn:15000/api/v1/slide_channel')
             .then(result => result.json())
             .then(data => {
+                console.log(data.data);
                 setData(data.data)
             })
     }, [])
+    
     useEffect(() => {
         const root = data.map(val => val.department)
         setCates([...new Set(root)].map(val => decryption[val]))
@@ -60,6 +62,7 @@ export const DataProvider = ({ children }) => {
     useEffect(() => {
         setCurrentList(data.filter(val => val.department === current))
     }, [current])
+
     const value = {
         data,
         cates,

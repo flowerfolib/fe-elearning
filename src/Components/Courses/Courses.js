@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useContext } from "react";
 import styles from "./Courses.module.css";
 import { useLocation } from "react-router-dom";
-import course from "../../Assets/Images/courses.png";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { DataContext } from "../../Context/Context";
 import { convertShortName } from "../../Extensions/convertShortName";
@@ -69,8 +68,10 @@ function Courses() {
                   )
                 }
               })
+
             : data.filter(val => val.department === 'orientation_integration').map((val, index) => {
               if (index < 6) {
+
                 return (
                    <li key={index} className={styles.course__item} data-aos="zoom-in" data-aos-duration="1000" >
                     <Link
@@ -88,7 +89,8 @@ function Courses() {
                   </li>
                 )
               }
-            })}
+            })
+            }
         </ul>
       </section>
       
