@@ -45,7 +45,7 @@ function QuizList() {
                 style={{ textAlign: "center", marginBottom: "20px" } }
                 data-aos="fade-down" 
                 data-aos-duration="2000"
-            >Danh sách bài thi</h1>
+            >DANH SÁCH BÀI THI</h1>
 
             <div 
                 className={`${styles.list}`}
@@ -54,7 +54,7 @@ function QuizList() {
             >
 
 
-                <Table striped hover>
+                <Table striped hover className={styles.table}>
                     <thead>
                         <tr>    
                             <th>#</th>
