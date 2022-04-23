@@ -17,7 +17,7 @@
     font-size: 1rem;
     padding: .5vw 1vw;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 15px;
     font-weight: 500;
 }
 
@@ -26,18 +26,13 @@
     display: inline-block;
     font-size: 1rem;
     background-color: var(--primary);
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: 20px;
     cursor: pointer;
     color: #fff;
     transition: .3s ease-in-out;
 }
-
-
-.btn:hover {
-    color: var(--text);
-    box-shadow: 0 0 10px 0 var(--primary);
-}
+ 
 
 /* ================ RESPONSIVE CSS ================ */
 @media (max-width: 64em) {

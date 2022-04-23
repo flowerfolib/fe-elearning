@@ -3,7 +3,7 @@ import Header from '../../Components/Header/Header'
 import Search from '../../Components/Search/Search'
 import CourseList from './CourseList/CourseList'
 import styles from './CoursesPage.module.css'
-import Navbar from './Navbar/Navbar'
+// import Navbar from './Navbar/Navbar'
 
 function CoursesPage() {
     return <>
@@ -11,7 +11,7 @@ function CoursesPage() {
             <Header />
             <Search />
             <div className={styles.content}>
-                <Navbar />
+                {/* <Navbar /> */}
                 <CourseList />
             </div>
             <Footer />
