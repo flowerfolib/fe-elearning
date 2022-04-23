@@ -1,23 +1,19 @@
-import React, { useEffect, useRef, useContext, componentDidMount } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import { useLocation } from "react-router-dom";
 import styles from "./Training.module.css";
-import trainIm from "../../Assets/Images/courses.png";
 import { DataContext } from "../../Context/Context";
-import { convertShortName } from "../../Extensions/convertShortName";
 import { toSlug } from "../../Extensions/Extensions";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 function Training() {
 
   AOS.init()
-  let routerLink = convertShortName(
-    useLocation().pathname.replace("/khoa-hoc/", "")
-  );
+  // let routerLink = convertShortName(
+  //   useLocation().pathname.replace("/khoa-hoc/", "")
+  // );
 
   const { data, department, depart, setDepart } = useContext(DataContext);
-  const introRef = useRef();
-  const handleChange = () => { };
+
   const lineRef = useRef();
   const firstChild = useRef();
 
@@ -26,10 +22,10 @@ function Training() {
     const width = e.target.offsetWidth;
     lineRef.current.style.left = left + "px";
     lineRef.current.style.width = width + "px";
-    // document
-    //   .querySelector("." + styles.nav__item + "." + styles.active)
-    //   .classList.remove(styles.active);
-    // e.target.closest("." + styles.nav__item).classList.add(styles.active);
+    document
+      .querySelector("." + styles.nav__item + "." + styles.active)
+      .classList.remove(styles.active);
+    e.target.closest("." + styles.nav__item).classList.add(styles.active);
 
     setDepart(e.target.closest("li").dataset.department)
 

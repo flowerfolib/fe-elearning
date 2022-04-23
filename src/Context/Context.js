@@ -50,6 +50,7 @@ export const DataProvider = ({ children }) => {
         fetch('http://test.diligo.vn:15000/api/v1/slide_channel')
             .then(result => result.json())
             .then(data => {
+                console.log(data.data);
                 setData(data.data)
             })
     }, [])

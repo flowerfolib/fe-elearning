@@ -12,7 +12,7 @@ function Control() {
         api,
         index,
         setIndex,
-        list,
+        
         listChecked,
         isVisible,
         setIsVisible,

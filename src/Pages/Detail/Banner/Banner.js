@@ -1,4 +1,3 @@
-import axios from 'axios'
 import React from 'react'
 import styles from './Banner.module.css'
 import {
