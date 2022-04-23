@@ -12,6 +12,7 @@ import QuizList from './Pages/QuizList/QuizList'
 import Quiz from './Pages/Quiz';
 import Signin from './Pages/Account/SignIn';
 import Support from './Pages/Support/Support.js';
+import Index from './Pages/FAQs';
 
 
 ReactDOM.render(
@@ -26,7 +27,7 @@ ReactDOM.render(
            <Route path={"/bai-thi"} component={Quiz} /> 
           <Route exact path={"/khoa-hoc/chi-tiet/:name"} component={Detail} />
           <Route path={"/khoa-hoc/chi-tiet/:name/lab"} component={CourseDetail} />
-          <Route exact path={"/ho-tro"} component={Support} />
+          <Route exact path={"/ho-tro"} component={Index} />
           <Route exact path={"/ket-qua"} component={Result} />
 
           <Route exact path={"/dang-nhap"} component={Signin} />
