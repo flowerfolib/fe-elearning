@@ -7,7 +7,7 @@ function Search() {
         console.log(value)
     },[value])
     return (
-        <section className={styles.main}>
+        <section className={`${styles.main} container px-5`} style={{borderRadius:'10px'}}>
             <div className={styles.wrap}>
                 <input
                     type="text"

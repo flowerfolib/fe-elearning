@@ -11,20 +11,20 @@ import { toSlug } from '../../../Extensions/Extensions';
 
 function CourseList() {
   const { data } = useContext(DataContext)
-  let routerLink = convertShortName(useLocation().pathname.replace("/khoa-hoc/", ''))
+  let routerLink = convertShortName(useLocation().pathname.replace("/khoa-hoc/", '')) 
   return (
-    <div className={styles.main}>
+    <div className={`${styles.main} container`}>
       <ul className={styles.list}>
         
         {
           data.filter((item) => routerLink ? item.department === routerLink : item).map(
             (val, index) =>
-              <li key={index} className={styles.item}>
+              <li key={index} className={`${styles.item} col-sm-3 mb-5`}>
                 <div className={styles.item__inner}>
                   <span className={styles.tag__new}>
                     New
                   </span>
-                  <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: '60px' }}>
+                  <div>
                     <img src={val.avatar} alt="" className={styles.item__img} />
                   </div>
                   <h3 className={styles.item__title}>
@@ -41,6 +41,7 @@ function CourseList() {
                       <PersonOutlineIcon className={styles.info__icon} /> {val.members_count} Học viên
                     </p>
                   </div>
+                  <div className={styles.info} style={{paddingBottom:'15px'}}>
                   <Link
                     to={{
                       pathname: `/khoa-hoc/chi-tiet/${toSlug(val.name)}`,
@@ -48,7 +49,7 @@ function CourseList() {
                     }}
                     className={styles.item__join}>
                     Tham gia
-                  </Link>
+                  </Link></div>
                 </div>
               </li>
           )
