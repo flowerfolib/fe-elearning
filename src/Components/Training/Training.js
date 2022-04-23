@@ -15,7 +15,7 @@ import TabPanel from '@mui/lab/TabPanel';
 
 function Training() {
 
-  const [value, setValue] = useState('1');
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -42,7 +42,7 @@ function Training() {
     //   .classList.remove(styles.active);
     // e.target.closest("." + styles.nav__item).classList.add(styles.active);
 
-    // setDepart(e.target.closest("li").dataset.department);
+    setDepart(e.target.closest("li").dataset.department);
   };
 
   // useEffect(() => {
@@ -64,7 +64,7 @@ function Training() {
     <div className={styles.main}>
       <h2 className={styles.title}>Đào tạo nội bộ</h2>
       <ul className={styles.nav}>
-        <div ref={lineRef} className={styles.nav__line} style={{left:`${100*isActive}px`,width:`${100*isActive}px`}}/>
+        <div ref={lineRef} className={`${styles.nav__line} `} style={{left:`${100*isActive}px`,width:`${100*isActive}px`}}/>
 
         {/* <li ref={firstChild} className={`${styles.nav__item} ${isActive ===0 ? styles.active : null}`}>
           <Link to="" onClick={() => {handleClick();setIsActive(0)}} className={styles.nav__link}>
@@ -73,36 +73,40 @@ function Training() {
         </li> */}
 
 
-        <Box sx={{ width: '100%', typography: 'body1' }}>
+
+
+<Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList 
-            onChange={handleChange} 
-            aria-label="lab API tabs example"
-            style = {{display: "flex" ,justifyContent:"center"}}
+          onChange={handleChange} 
+          aria-label="lab API tabs example"
+          centered
+          className={styles.nav__link}
           >
-           {department.map((e,index)=>(
+            
+            {department.map((e,index1)=>(
              <Tab 
               label={e.name} 
-              value={index} 
-              key = {index}
+              value={index1} 
+              key = {index1}
             />
            ))}
-
           </TabList>
-        </Box >
-        
-        <ul className={styles.train__list}>
+        </Box>
+        <TabPanel value={value}>
+          <ul className={styles.train__list}>
+          
+          
           {data
-
             .filter((item) =>
               depart ? item.department === depart : item.department !== depart
             )
-            .map((val, index) => (
+            .map((val, index2) => (
               <li
-                key={index}
+                key={index2}
                 className={styles.train__item}
-                data-aos-duration={2000 + 1000 * (index + 1)}
+                data-aos-duration={2000 + 1000 * (index2 + 1)}
                 data-aos="flip-up"
               >
                 <Link
@@ -114,7 +118,7 @@ function Training() {
                 >
                   <div
                     className="d-flex"
-                    style={{ height: "150px", justifyContent: "center" }}
+                    style={{ height: "200px", justifyContent: "center" }}
                   >
                     <img src={val.avatar} alt="" className={styles.train__img} />
                   </div>
@@ -126,9 +130,12 @@ function Training() {
             
             }
         </ul>
-   
+        </TabPanel>
+        
       </TabContext>
     </Box>
+
+
 
 
         {/* {department.map((e, index) => (
@@ -143,7 +150,7 @@ function Training() {
           </li>
         ))} */}
       </ul>
-      <ul className={styles.train__list}>
+      {/* <ul className={styles.train__list}>
         {data
           .filter((item) =>
             depart ? item.department === depart : item.department !== depart
@@ -173,7 +180,7 @@ function Training() {
               </Link>
             </li>
           ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
