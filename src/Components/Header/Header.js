@@ -6,15 +6,13 @@ import logo from "../../Assets/Images/logo.png";
 import {
   getToken,
   getName,
-  getLink,
   removeUserSession,
 } from "../../Utils/Common";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
-function Header(props) {
+function Header() {
   const token = getToken();
   const names = getName();
-  const link = getLink();
   const handleLogout = () => {
     <Link to="/dang-nhap" />;
     removeUserSession();
@@ -31,11 +29,13 @@ function Header(props) {
       setShow(!show);
     }
   }
-  const path = useLocation().pathname.split('/')[1]
-  useEffect(() => {
-    const currItem = document.querySelector(`.${styles.item__link}[data-path="${path}"]`)
-    currItem.classList.add(styles.active)
-  }, [path])
+
+  // const path = useLocation().pathname.split('/')[1]
+  // useEffect(() => {
+  //   const currItem = document.querySelector(`.${styles.item__link}[data-path="${path}"]`)
+  //   currItem.classList.add(styles.active)
+  // }, [path])
+
   useEffect(() => {
     if (show) {
       const lastItem = navRef.current.lastChild;

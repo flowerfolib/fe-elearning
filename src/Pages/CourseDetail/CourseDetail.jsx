@@ -35,6 +35,7 @@ function CourseDetail() {
         <div className="row">
           <div className={`${styles.courseContent} col-md-8`} style={{marginBottom:"10rem"}}>
             <iframe
+              title  = "video"
               src={linkVid}
               allowFullScreen
               className={styles.courseVideo}

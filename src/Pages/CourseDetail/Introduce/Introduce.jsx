@@ -1,6 +1,5 @@
 import React,{useContext} from 'react'
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
-import styles from './Introduce.module.css'
 import { DataContext } from '../../../Context/Context'
 
 

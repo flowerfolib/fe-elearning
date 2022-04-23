@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import { useLocation } from "react-router-dom";
 import { DataContext } from '../../../Context/Context'
 import styles from './CourseList.module.css'
-import course from '../../../Assets/Images/course__detail.jpg'
 import PersonIcon from '@mui/icons-material/Person';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';

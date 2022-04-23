@@ -1,11 +1,10 @@
 import Footer from "../../Components/Footer/Footer.js";
 import Header from "../../Components/Header/Header.js";
-import React, { useState } from "react";
-import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
+import React from "react";
+import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import styles from "./Support.module.css";
 
-function Support() {
-  const [expand, setExpand] = useState(true)
+function Support() { 
   const api = [
     {
       id: 1,

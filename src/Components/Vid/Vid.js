@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, {  useRef } from 'react'
 import styles from './Vid.module.css'
 import edumaVideo from '../../Assets/Videos/Eduma-Preview.mp4'
 
@@ -7,7 +7,7 @@ function Vid() {
   return (
     <div className={styles.main}>
       <div className={styles.wrap}>
-        {/* <video ref={vidRef} controls muted src={edumaVideo} className={styles.vid} /> */}
+        <video ref={vidRef} controls muted src={edumaVideo} className={styles.vid} />
         <iframe
         title = "video"
           ref={vidRef}
