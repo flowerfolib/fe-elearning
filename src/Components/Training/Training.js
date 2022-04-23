@@ -15,7 +15,9 @@ import TabPanel from '@mui/lab/TabPanel';
 
 function Training() {
 
+
   const [value, setValue] = useState('1');
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -42,7 +44,9 @@ function Training() {
     //   .classList.remove(styles.active);
     // e.target.closest("." + styles.nav__item).classList.add(styles.active);
 
+
     // setDepart(e.target.closest("li").dataset.department);
+
   };
 
   // useEffect(() => {
@@ -64,7 +68,9 @@ function Training() {
     <div className={styles.main}>
       <h2 className={styles.title}>Đào tạo nội bộ</h2>
       <ul className={styles.nav}>
+
         <div ref={lineRef} className={styles.nav__line} style={{left:`${100*isActive}px`,width:`${100*isActive}px`}}/>
+
 
         {/* <li ref={firstChild} className={`${styles.nav__item} ${isActive ===0 ? styles.active : null}`}>
           <Link to="" onClick={() => {handleClick();setIsActive(0)}} className={styles.nav__link}>
@@ -103,6 +109,7 @@ function Training() {
                 key={index}
                 className={styles.train__item}
                 data-aos-duration={2000 + 1000 * (index + 1)}
+
                 data-aos="flip-up"
               >
                 <Link
@@ -114,7 +121,9 @@ function Training() {
                 >
                   <div
                     className="d-flex"
+
                     style={{ height: "150px", justifyContent: "center" }}
+
                   >
                     <img src={val.avatar} alt="" className={styles.train__img} />
                   </div>
@@ -126,7 +135,9 @@ function Training() {
             
             }
         </ul>
+
    
+
       </TabContext>
     </Box>
 
@@ -143,7 +154,9 @@ function Training() {
           </li>
         ))} */}
       </ul>
+
       <ul className={styles.train__list}>
+
         {data
           .filter((item) =>
             depart ? item.department === depart : item.department !== depart
@@ -173,7 +186,9 @@ function Training() {
               </Link>
             </li>
           ))}
+
       </ul>
+
     </div>
   );
 }
