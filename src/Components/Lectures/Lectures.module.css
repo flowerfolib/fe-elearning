@@ -1,0 +1,34 @@
+.lecturesSection{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+.subSection{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+}
+.lectureInfo{
+    height: 31.25rem;
+}
+.lectureDesc{
+    text-align: center;
+}
+.lectureImg{
+    background-image: linear-gradient( to top, #fff, rgb(255, 147, 45));
+    height: 18.75rem;
+
+    border-radius: 50%;
+}
+.lectureImg  img{
+    transform: scale(1.2);
+    margin-top: -2.4rem;
+    object-fit: cover;
+}
+.lectureImg img{
+    max-width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+}
