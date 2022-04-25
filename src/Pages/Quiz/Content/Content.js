@@ -80,7 +80,7 @@ function Content() {
         </div>
 
 
-        <div className="d-flex align-items-center" style={{ height: '50vh', paddingBottom: '10vh' }}>
+        <div className="d-flex align-items-center" style={{ height: '40vh', paddingBottom: '10vh' }}>
           <div className="mx-auto">
             <h1 className={styles.quest__content}>
               <span className={styles.quest__number}>

@@ -8,7 +8,7 @@ function Index() {
   const [width, setWidth] = useState('w-50')
   useEffect(() => {
     const handleResize = () => {
-      if(window.innerWidth < 1024) {
+      if (window.innerWidth < 1024) {
         setWidth('w-80')
       } else {
         setWidth('w-50')
@@ -20,11 +20,11 @@ function Index() {
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  },[])
+  }, [])
   return (
     <>
       <Header />
-      <div className="position-relative" style={{ marginBottom: "3rem"}}>
+      <div className="position-relative" style={{ marginBottom: "3rem" }}>
         <div
           className={`position-absolute w-100 d-flex justify-content-center align-items-center ${styles.cardBanner}`}
         >
@@ -69,9 +69,9 @@ function Index() {
 
       <div
         className={`container ${width}`}
-        style={{ marginTop: "15rem",marginBottom: "3rem"}}
+        style={{ marginTop: "15rem", marginBottom: "3rem" }}
       >
-        <Accordition  />
+        <Accordition />
       </div>
       <div className="mt-5">
         <Footer />

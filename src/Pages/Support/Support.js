@@ -4,7 +4,7 @@ import React from "react";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import styles from "./Support.module.css";
 
-function Support() { 
+function Support() {
   const api = [
     {
       id: 1,

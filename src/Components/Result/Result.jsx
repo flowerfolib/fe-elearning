@@ -80,7 +80,7 @@ export default function ColumnGroupingTable() {
                 <TableCell
                   align="center"
                   style={{
-                    background: "green",
+                    background: " var(--primary)",
                     color: "white",
                   }}
                   colSpan={5}
@@ -143,7 +143,10 @@ export default function ColumnGroupingTable() {
         style={{ marginTop: "1rem" }}
         className="d-flex justify-content-center"
       >
-        <Button className="btn-success">Về trang chủ</Button>
+        <button
+          className={`${styles.btn__success}`}
+        >
+          Về trang chủ</button>
       </Link>
       <Footer />
     </>

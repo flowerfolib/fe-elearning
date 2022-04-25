@@ -100,19 +100,19 @@
    .course__item {
       width: 100%;
    }
-   
-.img__wrap{
-   display: flex;
-   justify-content: center;
-   height: 60vh;
-}
-.img{
-   height: 30vh;
-}
+
+   .img__wrap {
+      display: flex;
+      justify-content: center;
+      height: 60vh;
+   }
+   .img {
+      height: 30vh;
+   }
 }
 
 /* ========================== TABLET CSS ========================== */
-@media only screen and (min-width: 740px)and (max-width: 1023px){
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
    .course__item {
       width: calc(100% / 2);
       padding: 10px;
@@ -120,8 +120,7 @@
 }
 
 /* ===================== MOBILE CSS ===================== */
-@media only screen and  (max-width: 739px){
-
+@media only screen and (max-width: 739px) {
    .main {
       padding: 10vw 0;
    }
