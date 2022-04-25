@@ -3,6 +3,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import MenuIcon from "@mui/icons-material/Menu";
 import styles from "./Header.module.css";
 import logo from "../../Assets/Images/logo.png";
+import { useLocation } from "react-router-dom";
 import {
   getToken,
   getName,
@@ -24,17 +25,21 @@ function Header() {
     fontSize: "10vw",
     color: "var(--text)",
   };
+
   const handleShow = e => {
     if (window.innerWidth <= 1024) {
       setShow(!show);
     }
-  }
 
-  // const path = useLocation().pathname.split('/')[1]
-  // useEffect(() => {
-  //   const currItem = document.querySelector(`.${styles.item__link}[data-path="${path}"]`)
-  //   currItem.classList.add(styles.active)
-  // }, [path])
+  }
+  const path = useLocation().pathname.split('/')[1]
+  useEffect(() => {
+    const currItem = document.querySelector(`.${styles.item__link}[data-path="${path}"]`)
+    if (currItem) {
+
+      currItem.classList.add(styles.active)
+    }
+  }, [path])
 
   useEffect(() => {
     if (show) {
@@ -103,7 +108,7 @@ function Header() {
         </li>
       </ul>
       {token ?
-       
+
         <div className={styles.user}>
           <i
             className={"fa-solid fa-user " + styles.user__icon}

@@ -12,7 +12,6 @@ function Control() {
         api,
         index,
         setIndex,
-        
         listChecked,
         isVisible,
         setIsVisible,

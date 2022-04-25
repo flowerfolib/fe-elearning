@@ -4,6 +4,9 @@
     flex-direction: column;
     margin-bottom: 30px;
 }
+.tabmenu {
+    color: red;
+}
 
 .title {
     font-size: 3rem;
@@ -59,7 +62,7 @@
 }
 
 .train__link {
-    padding:  20px 20px 0 20px;
+    padding: 20px 20px 0 20px;
     display: block;
     border-radius: 25px;
     position: relative;
@@ -94,7 +97,6 @@
 .train__img {
     border-radius: 15px;
     object-fit: cover;
-
 }
 
 .test {
@@ -112,40 +114,35 @@
     color: var(--text);
 }
 
-
 /* -------------------------mobile--------------------- */
-@media only screen and  (max-width: 739px){
-
-    .nav__link{
+@media only screen and (max-width: 739px) {
+    .nav__link {
         font-size: 20px;
     }
-    .train__list{
+    .train__list {
         margin-bottom: 20px;
     }
-    .train__item{
-        padding:10px;
+    .train__item {
+        padding: 10px;
     }
 
-    .train__link{
-        padding:5px;
+    .train__link {
+        padding: 5px;
     }
 }
 
-
-
 /* -------------------------iPads & tablets--------------------- */
-@media only screen and (min-width: 740px)and (max-width: 1023px){
-    .nav__link{
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+    .nav__link {
         font-size: 20px;
     }
-    .train__list{
+    .train__list {
         margin-bottom: 40px;
-
     }
-    .train__item{
-        padding:10px;
+    .train__item {
+        padding: 10px;
     }
-    .train__link{
-        padding:5px;
+    .train__link {
+        padding: 5px;
     }
 }
