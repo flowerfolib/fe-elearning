@@ -110,7 +110,7 @@ function CourseDetail() {
           </div>
           <div className={`col-md-4`}>
             <div className={`${styles.courseList}`}>
-              <h2 className={`${styles.listTitle}`}>Nội dung khóa học</h2>
+              <h2 className={`${styles.listTitle}`} style={{fontWeight:'600'}}>Nội dung khóa học</h2>
               <LabList />
             </div>
           </div>

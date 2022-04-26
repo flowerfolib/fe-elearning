@@ -51,7 +51,7 @@
 
 .train__list {
     width: 80%;
-    margin: 0 auto 200px;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
 }
