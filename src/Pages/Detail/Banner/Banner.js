@@ -26,7 +26,7 @@ function Banner({ data }) {
                                         className={styles.desc}
                                         dangerouslySetInnerHTML={{ __html: data.description.replaceAll('<p>', '').split('</p>')[0].italics() }}
                                     />
-                                    <input type="submit" value="Tham gia" onClick={handleSubmit}/>
+                                    <input type="submit" className={styles.inputJoin} value="Tham gia" onClick={handleSubmit}/>
                                 </div>
                             </div>
                         </div>

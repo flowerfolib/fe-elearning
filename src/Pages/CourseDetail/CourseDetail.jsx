@@ -9,6 +9,7 @@ import Analyst from "./Analyst/Analyst";
 import Share from "./Share/Share";
 import LabList from "../Detail/LabList/LabList";
 import { DataContext } from "../../Context/Context";
+import FunQuiz from "./FunQuiz/FunQuiz";
 
 function CourseDetail() {
   const { data } = useContext(DataContext);
@@ -17,9 +18,11 @@ function CourseDetail() {
     setContent(+e.target.dataset.content);
 
     document
-      .querySelector("." + styles.nav__item + "." + styles.active)
+      .querySelector("." + styles.navItem + "." + styles.active)
       .classList.remove(styles.active);
+
     e.target.parentElement.classList.add(styles.active);
+
   };
   const currCate = useLocation().hash.split("#")[1];
   const currLab = useLocation().hash.split("#")[2];
@@ -33,15 +36,15 @@ function CourseDetail() {
       <Header />
       <div className={`container ${styles.mainCourse}`}>
         <div className="row">
-          <div className={`${styles.courseContent} col-md-8`} style={{marginBottom:"10rem"}}>
+          <div className={`${styles.courseContent} col-md-8`} style={{ marginBottom: "10rem" }}>
             <iframe
-              title  = "video"
+              title="video"
               src={linkVid}
               allowFullScreen
               className={styles.courseVideo}
             ></iframe>
             <ul className={styles.nav}>
-              <li className={`${styles.nav__item} ${styles.active}`}>
+              <li className={`${styles.navItem} ${styles.active}`}>
                 <p
                   onClick={handleClick}
                   data-content={1}
@@ -50,7 +53,7 @@ function CourseDetail() {
                   Giới thiệu
                 </p>
               </li>
-              <li className={styles.nav__item}>
+              <li className={styles.navItem}>
                 <p
                   onClick={handleClick}
                   data-content={2}
@@ -59,7 +62,7 @@ function CourseDetail() {
                   Bình luận
                 </p>
               </li>
-              <li className={styles.nav__item}>
+              <li className={styles.navItem}>
                 <p
                   onClick={handleClick}
                   data-content={3}
@@ -68,7 +71,7 @@ function CourseDetail() {
                   Thống kê
                 </p>
               </li>
-              <li className={styles.nav__item}>
+              <li className={styles.navItem}>
                 <p
                   to="/khoa-hoc/chi-tiet/lab"
                   onClick={handleClick}
@@ -76,6 +79,16 @@ function CourseDetail() {
                   className={styles.nav__link}
                 >
                   Chia sẻ
+                </p>
+              </li>
+              <li className={styles.navItem}>
+                <p
+                  to="/khoa-hoc/chi-tiet/lab"
+                  onClick={handleClick}
+                  data-content={5}
+                  className={styles.nav__link}
+                >
+                  Đố vui
                 </p>
               </li>
             </ul>
@@ -88,16 +101,16 @@ function CourseDetail() {
                     <Comment />
                   ) : content === 3 ? (
                     <Analyst />
-                  ) : (
+                  ) : content === 4 ? (
                     <Share />
-                  )}
+                  ) : (<FunQuiz />)}
                 </div>
               </div>
             </div>
           </div>
           <div className={`col-md-4`}>
             <div className={`${styles.courseList}`}>
-              <h2 className={`${styles.listTitle}`}>Nội dung khóa học</h2>
+              <h2 className={`${styles.listTitle}`} style={{fontWeight:'600'}}>Nội dung khóa học</h2>
               <LabList />
             </div>
           </div>
@@ -107,5 +120,4 @@ function CourseDetail() {
     </>
   );
 }
-
 export default CourseDetail;

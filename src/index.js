@@ -24,7 +24,7 @@ ReactDOM.render(
           <Route exact path={"/khoa-hoc"} component={CoursesPage} />
           <Route exact path={"/khoa-hoc/:name"} component={CoursesPage} />
           <Route path={"/ky-thi"} component={QuizList} />
-           <Route path={"/bai-thi"} component={Quiz} /> 
+          <Route path={"/bai-thi"} component={Quiz} />
           <Route exact path={"/khoa-hoc/chi-tiet/:name"} component={Detail} />
           <Route path={"/khoa-hoc/chi-tiet/:name/lab"} component={CourseDetail} />
           <Route exact path={"/ho-tro"} component={Index} />

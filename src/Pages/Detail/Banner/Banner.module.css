@@ -20,8 +20,21 @@
     overflow: hidden;
     margin-bottom: 0;
 }
+.desc a {
+    color:#fff;
+}
 
 .avatar {
     height: max-content;
     -webkit-user-drag: none;
+    border-radius: 15px;
+}
+.inputJoin {
+    background: #ffffff;
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #ff4747;
+    text-transform: uppercase;
+    border: 3px solid #ffff;
 }

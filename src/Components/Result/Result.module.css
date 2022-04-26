@@ -1,3 +1,9 @@
-.paper::-webkit-scrollbar{
+.paper::-webkit-scrollbar {
   display: none;
+}
+.btn__success {
+  background-color: var(--primary-dark);
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
 }

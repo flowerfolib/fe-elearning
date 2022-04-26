@@ -35,40 +35,40 @@ function QuizList() {
             <Header />
         
         <div className={`${styles.main}`}>
-
-                
-
             <h1 
-                style={{ textAlign: "center", marginBottom: "20px" } }
+                style={{ textAlign: "center", marginBottom: "50px" } }
                 data-aos="fade-down" 
                 data-aos-duration="2000"
-            >Danh sách bài thi</h1>
+            >DANH SÁCH BÀI THI</h1>
 
             <div 
                 className={`${styles.list}`}
                 data-aos="fade-down" 
                 data-aos-duration="1000"
+                style={{ textAlign: "center", marginBottom: "100px" } }
             >
 
 
-                <Table striped hover>
+                <Table striped hover className={styles.table}>
                     <thead>
                         <tr>    
                             <th>#</th>
                             <th>Tên bài thi</th>
-                            <th>Thời gian</th>
-                            <th>Số câu hỏi</th>
-                            <th>Tình trạng</th>
+                            <th className={`${styles.center}`}>Thời gian</th>
+                            <th className={`${styles.center}`}>Số câu hỏi</th>
+                            <th className={`${styles.center}`}>Tình trạng</th>
                         </tr>
                     </thead>
                     <tbody>
                         {listQ.map((e, index) => (
                             <tr key={index}  >
                                 <td>{index + 1}</td>
-                                <td>{e.name}</td>
-                                <td>{e.time}</td>
-                                <td>{e.questionsLength}</td>
-                                <td className={`d-flex justify-content-center`}>{e.isComplete ? <DoItNow /> : <Done />}</td>
+                                <td >{e.name}</td>
+                                <td className={`${styles.center}`}>{e.time}</td>
+                                <td className={`${styles.center}`}>{e.questionsLength}</td>
+                                <td className={`${styles.center}`}>
+                                    {e.isComplete ? <DoItNow /> : <Done />}
+                                </td>
 
                             </tr>
                         ))}

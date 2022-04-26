@@ -6,10 +6,10 @@
     position: relative;
 }
 .timer {
-    width: 3.3rem;
+    width: 5rem;
 }
 .timer__param {
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: #fff;
     font-weight: 600;
 }
