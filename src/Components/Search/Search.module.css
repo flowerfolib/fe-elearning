@@ -1,6 +1,6 @@
 .main {
-    display: flex;
-    margin: 9rem 0 6rem;
+    display: flex; 
+    height:40vh; 
 }
 
 .wrap {
